@@ -29,7 +29,7 @@ export const login = ({ credential, password }) => async dispatch => {
     body: JSON.stringify({ credential, password })
   });
   const data = await response.json();
-  storeCurrentUser(data.user);
+//   storeCurrentUser(data.user);
   dispatch(setCurrentUser(data.user));
   return response;
 };
