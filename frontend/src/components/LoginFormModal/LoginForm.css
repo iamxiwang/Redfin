@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap');
+
+
+
+.login {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 22px;
+    max-width: 370px;
+    padding: 50px;
+    background-color: #f2f2f2;
+  
+}
+
+input[type=text], input[type=password], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 8px;
+  margin-bottom: 22px;
+  resize: vertical;
+}
+

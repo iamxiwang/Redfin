@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "redfin_clone_frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -35,6 +35,7 @@
       "last 1 safari version"
     ]
   },
+  "description":"Redfin clone app, a real estate listings app",
   "devDependencies": {
     "redux-logger": "^3.0.6"
   },
