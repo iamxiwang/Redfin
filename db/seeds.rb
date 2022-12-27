@@ -33,3 +33,28 @@ ApplicationRecord.transaction do
 
     puts "Done!"
 end
+Listing.create(
+        agent_id: 5,
+        status: 'pending',
+        street_address: "180 Geary street",
+        city: 'san francisco',
+        state: 'CA',
+        zip: 94122,
+        property_type: 'apartment',
+        list_price: 1000000,
+        beds: 5,
+        baths: 2,
+        sqft: 1000,
+        lot: 1,
+        listing_date: DateTime.parse('2022-01-10'),
+        description: "Loacated in the center of san francisco, next to many luxuary store and two biggest shopping mall in bay area",
+        img_url: "https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        garage: 0,
+        year_built: 1990,
+        lat: '37.78804904454068', 
+        lng: '-122.40642200261699',
+        time_on_greenfin:100,
+        est_mo_payment:7650,
+        greenfin_estimate: 1500000,
+        price_per_sqft: 5000
+        )
