@@ -3,17 +3,18 @@ import { Route, Switch } from 'react-router-dom';
 import LoginFormPage from './components/LoginFormModal/LoginForm';
 import SignupFormPage from "./components/SignupFormModal/SignupForm";
 import Navigation from "./components/Navigation";
-import AppointmentPage from './components/AppointmentPage';
+import splash from './components/splash'
+import ListingShowPage from './components/ListingShowPage/index.jsx'
 
 
 
 function App() {
   return (
     <>
-       <Navigation />
         <Switch>
-          <Route path="/signup">
-            <SignupFormPage />
+          <Route exact path='/' component={splash}></Route>
+          <Route exact path='/listings/:listingId'>
+            <ListingShowPage />
           </Route>
         </Switch>
     </>

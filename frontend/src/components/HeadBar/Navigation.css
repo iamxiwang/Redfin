@@ -3,25 +3,31 @@
 
 
 
-header {
+.home-hero-outer-2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-family: 'Libre Franklin', sans-serif;
-    /* color: white; */
+
+} 
+
+
+.menue_item_clickable-2 {
+    color: black;
 }
 
 /* right side of the navbar */
-.header-right {
+.header-right-2 {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     margin: 10px;
 }
 
-#logo {
+#logo-2 {
     font-family: 'Days One', sans-serif;
     font-size: 60px;
+    color: green
 }
 
 
@@ -29,6 +35,7 @@ header {
     padding: 0 20px;
     cursor: pointer;
     text-decoration: none;
+    
 }
 
 

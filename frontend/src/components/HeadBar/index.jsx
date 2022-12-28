@@ -38,23 +38,22 @@ function Navigation() {
   }
 
   return (
-    <div class='home-hero-outer'>
-    <header>
-        <div class='header-left'>
-            <NavLink id='logo' exact to="/">GREENFIN</NavLink>
+    <div class='home-hero-outer-2'>
+    
+        <div class='header-left-2'>
+            <NavLink id='logo-2' exact to="/">GREENFIN</NavLink>
         </div>
         {}
-        <div class='header-right' >
+        <div class='header-right-2' >
             <h3>1-844-759-7732</h3>
-            <NavLink class='menue_item_clickable' exact to='/'>Buy</NavLink>
-            <NavLink class='menue_item_clickable' exact to='/'>Rent</NavLink>
-            <NavLink class='menue_item_clickable' exact to='/'>Sell</NavLink>
-            <NavLink class='menue_item_clickable' exact to='/'>Morgage</NavLink>
+            <NavLink class='menue_item_clickable-2' exact to='/'>Buy</NavLink>
+            <NavLink class='menue_item_clickable-2' exact to='/'>Rent</NavLink>
+            <NavLink class='menue_item_clickable-2' exact to='/'>Sell</NavLink>
+            <NavLink class='menue_item_clickable-2' exact to='/'>Morgage</NavLink>
            
             {sessionLinks}
         </div>
-    </header>
-    
+ 
     </div>
   );
 }
