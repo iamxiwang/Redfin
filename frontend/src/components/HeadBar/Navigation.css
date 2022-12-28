@@ -21,17 +21,18 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin: 10px;
+    margin-top: 10px;
+    margin-right: 0px;
 }
 
 #logo-2 {
     font-family: 'Days One', sans-serif;
-    font-size: 60px;
+    font-size: 40px;
     color: green
 }
 
 
-.menue_item_clickable {
+.menue_item_clickable-2 {
     padding: 0 20px;
     cursor: pointer;
     text-decoration: none;
@@ -89,4 +90,31 @@
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+}
+
+.search-container-2 input[type='text'] {
+    width: 250px;
+    padding: 9px;
+    margin-left: 1px;
+  
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+.search-container-2 button {
+    padding: 8px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: green;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.search-container-2 button:hover {
+    background: rgb(117, 115, 115);
 }

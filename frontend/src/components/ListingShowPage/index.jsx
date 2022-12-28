@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux"
 import {getListing, fetchListing} from '../../store/listings' 
 import Navigation from "../HeadBar";
+import Appointment from "../Appointment";
 import './ListingShow.css'
 
 const ListingShowPage = () => {
@@ -21,6 +22,7 @@ const ListingShowPage = () => {
         <div className="show">
             <Navigation />
             <h2>{listing.city}</h2>
+            <Appointment/>
         </div>
     )
 }

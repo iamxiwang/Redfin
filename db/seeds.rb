@@ -33,28 +33,87 @@ ApplicationRecord.transaction do
 
     puts "Done!"
 end
-Listing.create(
-        agent_id: 5,
-        status: 'pending',
-        street_address: "180 Geary street",
-        city: 'san francisco',
+
+Listing.create!(
+        agent_id: 3,
+        status: 'Open house SUN 12pm 50 2 pm',
+        street_address: "2601 Union St,",
+        city: 'San Francisco',
         state: 'CA',
-        zip: 94122,
-        property_type: 'apartment',
-        list_price: 1000000,
+        zip: 94123,
+        property_type: 'Single Family Residential',
+        list_price: 6295000,
         beds: 5,
-        baths: 2,
-        sqft: 1000,
-        lot: 1,
+        baths: 5,
+        sqft: 4695,
+        lot: 2368,
+        listing_date: DateTime.parse('2022-11-10'),
+        description: "Stunning Cape Cod residence on a coveted Cow Hollow block, just steps to the many shops and restaurants of Union Street and Chestnut Street. This exceptional home has been superbly renovated, with fine detailing throughout.",
+        img_url: "https://ssl.cdn-redfin.com/photo/27/islphoto/087/genIslnoResize.422705087_8.jpg",
+        garage: 3,
+        year_built: 1908,
+        lat: '37.79634220453183', 
+        lng: '-122.44234883111793',
+        time_on_greenfin:90,
+        est_mo_payment: 40346,
+        greenfin_estimate: 6131919,
+        price_per_sqft: 1341
+        )
+
+
+Listing.create!(
+        agent_id: 8,
+        status: 'active',
+        street_address: "41-43 Parker Ave,",
+        city: 'San Francisco',
+        state: 'CA',
+        zip: 94118,
+        property_type: 'Muti-Family(2-4 Unit)',
+        list_price: 3985000,
+        beds: 6,
+        baths: 4,
+        sqft: 3000,
+        lot: 4295,
         listing_date: DateTime.parse('2022-01-10'),
-        description: "Loacated in the center of san francisco, next to many luxuary store and two biggest shopping mall in bay area",
+        description: "41-43 Parker is a fabulous duplex located in the highly desirable Jordan Park neighborhood. Both units are 3 bedrooms and 2 bathrooms. The kitchens have granite countertops, high end appliances, and gourmet stoves. There is a large backyard with decks, and a potential for a private garage. The area was formerly known as Doctors Row as many physicians occupied the area due to the close proximity of the former Children's Hospital. Walking distance to Laurel Heights Shopping Center and the Geary Boulevard Shopping District.",
         img_url: "https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         garage: 0,
-        year_built: 1990,
-        lat: '37.78804904454068', 
-        lng: '-122.40642200261699',
-        time_on_greenfin:100,
-        est_mo_payment:7650,
-        greenfin_estimate: 1500000,
-        price_per_sqft: 5000
+        year_built: 1908,
+        lat: '37.78562262774873', 
+        lng: '-122.45499894660016',
+        time_on_greenfin:105,
+        est_mo_payment:25566,
+        greenfin_estimate: 3840605,
+        price_per_sqft: 1328
         )
+
+
+
+
+
+
+Listing.create!(
+            agent_id: 9,
+            status: 'Active',
+            street_address: "207 Cherry St,",
+            city: 'San Francisco',
+            state: 'CA',
+            zip: 94118,
+            property_type: 'Singel Family Residential',
+            list_price: 11750000,
+            beds: 6,
+            baths: 3.5,
+            sqft: 5340,
+            lot: 4295,
+            listing_date: DateTime.parse('2022-10-10'),
+            description: "This beautifully remodeled home on a great flat block of Presidio Heights is for sale or lease for the first time in 36 years. Benefiting from 6 bedrooms, 3.5 baths, a library, office, big flat garden, multiple decks and patios, playroom, family room, and one of the best kitchens anyone could want, this home truly checks every box. There is off street parking for 3 cars and an electric outlet in the garage. 207 Cherry is elegant yet extremely approachable. It really is a feel good home! The rooms are spacious and there is great light. There are beautiful hardwood floors throughout and great detail. This is the house you've been waiting for.",
+            img_url: "https://ssl.cdn-redfin.com/photo/9/islphoto/548/genIslnoResize.422686548_0.jpg",
+            garage: 2,
+            year_built: 1909,
+            lat: '37.788621291249356', 
+            lng: ' -122.45752618878839',
+            time_on_greenfin:83,
+            est_mo_payment: 75308,
+            greenfin_estimate: 75308,
+            price_per_sqft: 2200
+            )

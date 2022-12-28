@@ -11,7 +11,6 @@ const splash =() => {
             <Navigation />
             <IndexSearchSection />
             <ListingIndexPage />
-
         </div>
     )
 }

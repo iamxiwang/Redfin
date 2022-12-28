@@ -1,12 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;500&display=swap');
+
 .home-search {
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    /* color: whitesmoke;
-    */
-    
 }
 a {
     /* color:aliceblue; */
@@ -45,14 +43,17 @@ a {
     background: rgb(117, 115, 115);
 }
 #inner-search {
-   padding:100px
+   /* padding:100px; */
+   padding-left: 150px;
+   padding-top:50px;
+   padding-bottom: 150px;
 
 }
 
 h1 {
     font-family: 'Libre Franklin', sans-serif;
     font-size: 2.25rem;
-    font-weight: 100;
+    font-weight: 1000;
     line-height: 2.75rem;
     margin: 0 0 0.5rem;
 }

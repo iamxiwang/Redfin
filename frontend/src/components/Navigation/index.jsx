@@ -38,13 +38,13 @@ function Navigation() {
   }
 
   return (
-    <div class='home-hero-outer'>
+    <div className='home-hero-outer'>
     <header>
-        <div class='header-left'>
+        <div className='header-left'>
             <NavLink id='logo' exact to="/">GREENFIN</NavLink>
         </div>
         {}
-        <div class='header-right' >
+        <div className='header-right' >
             <h3>1-844-759-7732</h3>
             <NavLink class='menue_item_clickable' exact to='/'>Buy</NavLink>
             <NavLink class='menue_item_clickable' exact to='/'>Rent</NavLink>

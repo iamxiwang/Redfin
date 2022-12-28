@@ -12,13 +12,32 @@ const ListingIndexPage =() => {
 
     useEffect( () => {
         dispatch(fetchListings())
-    },[])
+    },[dispatch])
 
     return (
-        <div className='listing-index'>
-            <h2>index</h2>
+    <div className='userfeed'>
+        <div className='FeedHomeSection'>
+            <h1>Feed</h1>
+            <div className='ItemPikerPill'>
+                <div id='ItemPikerPill-left'>
+                    <button id='v2-1'>All</button>
+                    <button id='v2'>New</button>
+                    <button id='v2'>Favorites</button>
+                    <button id='v2'>Price Change</button>
+                    <button id='v2'>Open House</button>
+                    <button id='v2'>Insights</button>
+                    <button id='v2'>Sold</button>
+                    <button id='v2'>Status Change</button>
+                </div>
+                <div id='ItemPikerPill-right'>
+                    <i class="fa-solid fa-cog fa-2x"></i>
+                </div>
+            </div>
+            <div className='row-flex'>
             <ListingList listings = {listings} />
+            </div>
         </div>
+    </div>
     )
 }
 

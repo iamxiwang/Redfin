@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 
 
 
-const AppointmentPage =() => {
+const Appointment =() => {
 
 
     return (
@@ -30,4 +30,4 @@ const AppointmentPage =() => {
     )
 }
 
-export default AppointmentPage
+export default Appointment

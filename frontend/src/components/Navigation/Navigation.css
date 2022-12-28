@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap');
 
 
 header {
@@ -21,7 +21,8 @@ header {
 
 #logo {
     font-family: 'Days One', sans-serif;
-    font-size: 60px;
+    font-size: 40px;
+    margin-left: 20px;
 }
 
 
@@ -65,21 +66,49 @@ header {
 .profile {
     position: relative;
     display: inline-block;
+    right:0
 }
 
 .profile-dropdown {
-    right:0;
+    display: flex;
+    justify-content:space-around;
+    right:-10px;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    width: 500px;
+    height: 400px;
+    padding-left: 0px;
 }
 
-.profile-dropdown a {
+#my-greenfin li, #my-setting li {
     color: black;
-    padding: 12px 16px;
+    padding-top:4px;
+    margin: 2px;
+    width:200px;
     text-decoration: none;
     display: block;
+
+}
+#my-greenfin, #my-setting {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    margin-top: 10px;
+    width:200px
+    
+}
+
+#greenfin-v1, #setting-v1 {
+    font-size: 18px;
+    font-weight: 800;
+}
+li {
+    font-weight: 'Libre Franklin', sans-serif;
+    font-size: 13px;
+
 }
