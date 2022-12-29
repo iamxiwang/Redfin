@@ -5,6 +5,7 @@ import SignupFormPage from "./components/SignupFormModal/SignupForm";
 import Navigation from "./components/Navigation";
 import splash from './components/splash'
 import ListingShowPage from './components/ListingShowPage/index.jsx'
+import HouseForm from './components/HouseForm';
 
 
 
@@ -16,6 +17,7 @@ function App() {
           <Route exact path='/listings/:listingId'>
             <ListingShowPage />
           </Route>
+          <Route path= '/listings/new' component={HouseForm} ></Route>
         </Switch>
     </>
   );

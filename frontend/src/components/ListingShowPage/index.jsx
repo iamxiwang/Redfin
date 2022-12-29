@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux"
 import {getListing, fetchListing} from '../../store/listings' 
 import Navigation from "../HeadBar";
 import Appointment from "../Appointment";
+import HouseForm from "../HouseForm"
 import './ListingShow.css'
 
 const ListingShowPage = () => {
@@ -16,13 +17,17 @@ const ListingShowPage = () => {
         if(listingId){
             dispatch(fetchListing(listingId))
         }
+        //[listingId] can add to independency
     },[listingId])
+    console.log(listing)
 
     return (
         <div className="show">
             <Navigation />
-            <h2>{listing.city}</h2>
+            {/* <img src={listing.imgUrl} alt="" />
+            <h2>{listing.city}</h2> */}
             <Appointment/>
+            <HouseForm />
         </div>
     )
 }

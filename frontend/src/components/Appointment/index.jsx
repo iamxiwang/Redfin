@@ -11,8 +11,8 @@ const Appointment =() => {
 
     return (
         <>
-        <div class= 'appointment'> 
-            <form >
+        <div className= 'appointment-container'> 
+            <form className='appointment-form' >
                 <h1>Appointment</h1>
                 <label >email
                     <input type="text" name="" id="" />

@@ -33,6 +33,8 @@ function LoginForm() {
       <ul>
         {errors.map(error => <li key={error}>{error}</li>)}
       </ul>
+      <h1>Sign in</h1>
+      <br />
       <label>
         Username or Email
         <input
@@ -53,6 +55,7 @@ function LoginForm() {
       </label>
       <button className='form_button' type="submit">Log In</button>
     </form>
+      <p id='term-privacy'>By signing in you agree to Redfin's Terms and Privacy</p>
     </div>
   );
 }

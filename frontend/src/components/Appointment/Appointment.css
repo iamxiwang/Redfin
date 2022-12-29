@@ -1,0 +1,8 @@
+.appointment-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.appointment-form {
+    padding: 40px;
+}

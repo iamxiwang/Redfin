@@ -43,6 +43,8 @@ function SignupForm() {
       <ul>
         {errors.map(error => <li key={error}>{error}</li>)}
       </ul>
+      <h1>Join GreenFin</h1>
+      <br />
       <label>
         Email
         <input
@@ -81,6 +83,7 @@ function SignupForm() {
       </label>
       <button className= 'form_button' type="submit">Sign Up</button>
     </form>
+    <p id='term-privacy'>By joining you agree to Redfin's Terms and Privacy</p>
     </div>
   );
 }

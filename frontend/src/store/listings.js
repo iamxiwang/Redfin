@@ -1,7 +1,8 @@
 import csrfFetch from "./csrf"
 
-export const SET_LISTINGS ='listings/setListings'
-export const ADD_LISTING ='listings/addListing'
+export const SET_LISTINGS ='listings/setListings';
+export const ADD_LISTING ='listings/addListing';
+export const REMOVE_LISTING ='listings/removeListing';
 
 
 const setListings =(listings) => ({
@@ -14,6 +15,10 @@ const addListing =(listing) => ({
     payload: listing
 })
 
+const removeListing =(listingId) => ({
+    type: REMOVE_LISTING,
+    payload: listingId
+})
 
 // store selectors
 
@@ -72,6 +77,30 @@ export const createListing = (listing) => async(dispatch) => {
     }
 }
 
+export const updateListing =(listing) => async (dispatch) => {
+    const res = await csrfFetch(`/api/listings/${listing.id}`,{
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(listing) 
+    })
+
+    if(res.ok){
+        const data = await res.json();
+        dispatch(addListing(data))
+    }
+}
+
+export const  deleteListing = (listingId) => async(dispatch) => {
+    const res = await csrfFetch(`/api/listings/${listingId}`,{
+        method:'DELETE'
+    })
+
+    if(res.ok){
+        dispatch(removeListing(listingId))
+    }
+}
 
 
 
@@ -82,6 +111,10 @@ const listingsReducer =( state={}, action) => {
             return {...action.payload}
         case ADD_LISTING:
             return {...state,[action.payload.id]: action.payload}
+        case REMOVE_LISTING:
+            const newState = {...state};
+            delete newState[action.payload.id];
+            return newState;
         default:
             return state
     }

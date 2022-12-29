@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap');
 
@@ -69,10 +69,10 @@ header {
     right:0
 }
 
-.profile-dropdown {
+ul.profile-dropdown {
     display: flex;
     justify-content:space-around;
-    right:-10px;
+    margin-right: -10px;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;

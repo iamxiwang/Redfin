@@ -4,6 +4,7 @@ import ListingIndexPage from "../ListingIndexPage"
 import './splash.css'
 
 
+
 const splash =() => {
 
     return (
@@ -11,6 +12,7 @@ const splash =() => {
             <Navigation />
             <IndexSearchSection />
             <ListingIndexPage />
+            
         </div>
     )
 }
