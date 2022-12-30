@@ -42,12 +42,12 @@ function Navigation() {
     
         <div class='header-left-2'>
             <NavLink id='logo-2' exact to="/">GREENFIN</NavLink>
+            <form className="search-container-2">
+              <input type="text" placeholder="Search.." name="search" />
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
         </div>
         
-        <form className="search-container-2">
-          <input type="text" placeholder="Search.." name="search" />
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
                 
         <div class='header-right-2' >
             <h3>1-844-759-7732</h3>

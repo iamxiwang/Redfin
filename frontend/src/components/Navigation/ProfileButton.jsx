@@ -31,7 +31,7 @@ function ProfileButton({ user }) {
 
   return (
     <>
-    <div class='profile'>
+    <div className='profile'>
         <button onMouseEnter={openMenu}><i class="fa-solid fa-user"></i></button>
         {showMenu && (
             <ul className="profile-dropdown">
@@ -51,7 +51,8 @@ function ProfileButton({ user }) {
                 <li>{user.username}</li>
                 <li>Email settings</li>
                 <li>Accounting settings</li>
-                <li><button onClick={logout}>Log Out</button></li>
+                <li id='profile-dropdown-button'>
+                  <button onClick={logout}>Log Out</button></li>
               </div>
             </ul>
         )}

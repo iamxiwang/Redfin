@@ -85,9 +85,9 @@ ul.profile-dropdown {
 }
 
 #my-greenfin li, #my-setting li {
-    color: black;
+    color: #767676;
     padding-top:4px;
-    margin: 2px;
+    margin: 3px;
     width:200px;
     text-decoration: none;
     display: block;
@@ -102,13 +102,29 @@ ul.profile-dropdown {
     width:200px
     
 }
-
-#greenfin-v1, #setting-v1 {
+li#greenfin-v1, li#setting-v1 {
+    color:black;
     font-size: 18px;
     font-weight: 800;
+    margin-bottom: 4px;
 }
 li {
     font-weight: 'Libre Franklin', sans-serif;
     font-size: 13px;
 
 }
+
+li#profile-dropdown-button {
+    padding-top:10px;
+    margin:10px;
+
+}
+
+li button {
+    background-color: #ccc;
+    height: 30px;;
+    width:90px;
+    border-radius: 4px 4px 4px 4px;
+    transition: all .1s ease-out 0s;
+}
+

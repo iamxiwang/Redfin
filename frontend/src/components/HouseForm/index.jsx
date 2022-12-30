@@ -9,6 +9,7 @@ const HouseForm =() =>{
     const {listingId} = useParams()
     const dispatch = useDispatch()
     const formType = listingId ? 'Update Lisitng' : 'Create Listing'
+    console.log(useParams())
     let listing = useSelector(getListing(listingId))
 
     if(formType === 'Create Listing'){
@@ -40,11 +41,12 @@ const HouseForm =() =>{
         }
     }
     useEffect(() => {
-        if(listingId){
+        if(listingId && listingId !== 'new' ){
             dispatch(fetchListing(listingId))
         }
     },[listingId])
-    
+
+
     const [agentId, setAgentId] = useState(listing.agentId);
     const [baths, setBaths] = useState(listing.baths);
     const [beds, setBeds] = useState(listing.beds);

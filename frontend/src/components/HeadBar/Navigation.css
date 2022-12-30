@@ -10,6 +10,10 @@
     font-family: 'Libre Franklin', sans-serif;
 
 } 
+.header-left-2{
+    display: flex;
+    align-items: center;
+}
 
 
 .menue_item_clickable-2 {
@@ -28,7 +32,8 @@
 #logo-2 {
     font-family: 'Days One', sans-serif;
     font-size: 40px;
-    color: green
+    color: green;
+    margin-left: 20px;
 }
 
 

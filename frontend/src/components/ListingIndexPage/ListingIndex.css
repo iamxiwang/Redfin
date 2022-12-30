@@ -4,7 +4,7 @@
 .userfeed {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-star;
     /* align-items: center; */
     margin: 80px;
    
@@ -20,15 +20,15 @@
     color: black;
     /* padding-left: 500px;
     padding-right: 500px; */
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 60px;
+    /* margin-right: 50px; */
     text-align: left;
 }
 
 .ItemPikerPill {
     display: flex;
     justify-content: space-between;
-    width: 1156px;
+    width: 1170px;
 }
 #ItemPikerPill-right {
     display: flex;
@@ -67,7 +67,7 @@
 }
 
 #index-card{
-    width: 368px;
+    width: 373px;
     height: 250px;
 }
 .interactive {
