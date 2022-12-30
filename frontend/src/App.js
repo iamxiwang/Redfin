@@ -11,6 +11,7 @@ function App() {
     <>
         <Switch>
           <Route exact path='/' component={splash}></Route>
+          <Route exact path='/listings/new' component={HouseForm} ></Route>
           <Route  path='/listings/:listingId'>
             <ListingShowPage />
           </Route>
