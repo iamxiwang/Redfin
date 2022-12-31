@@ -11,7 +11,7 @@
   
 }
 
-input[type=text], input[type=password], textarea {
+input[type=text], input[type=password], input[type=datetime-local],input[type=number],textarea {
   width: 100%;
   padding: 12px;
   border: 2px solid #ccc;

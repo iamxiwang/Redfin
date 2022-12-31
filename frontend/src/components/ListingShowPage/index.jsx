@@ -61,8 +61,7 @@ const ListingShowPage = () => {
                         <Map prop ={listing}/>
                     </div>
             </div>
-            {/* <Appointment/>
-            <HouseForm /> */}
+            <HouseForm />
             <Reviews />
             </div>
         </div>

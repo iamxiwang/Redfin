@@ -64,8 +64,8 @@ export const fetchListing = (listingId) =>async(dispatch) => {
 
 export const createListing = (listing) => async(dispatch) => {
     const res = await csrfFetch('/api/listings',{
-        method:'PSOT',
-        Headers: {
+        method:'POST',
+        headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(listing)
