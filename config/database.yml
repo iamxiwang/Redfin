@@ -81,6 +81,8 @@ test:
 #
 production:
   <<: *default
-  database: redfin_clone_production
-  username: redfin_clone
-  password: <%= ENV["REDFIN_CLONE_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
+
+  # database: redfin_clone_production
+  # username: redfin_clone
+  # password: <%= ENV["REDFIN_CLONE_DATABASE_PASSWORD"] %>

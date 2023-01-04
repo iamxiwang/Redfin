@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+
+
+
+.home-hero-outer-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Libre Franklin', sans-serif;
+    z-index: 110;
+    position: relative;
+    background-color: #fff;
+    border-bottom: 1px solid #e2e2e2;
+
+} 
+.header-left-2{
+    display: flex;
+    align-items: center;
+}
+
+
+.menue_item_clickable-2 {
+    color: black;
+    padding: 0 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* right side of the navbar */
+.header-right-2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+#logo-2 {
+    font-family: 'Days One', sans-serif;
+    font-size: 40px;
+    color: green;
+    margin-left: 20px;
+}
+
+
+.menue_item_clickable-2 {
+    padding: 0 20px;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+
+
+#sign_log , #demo {
+    color:black;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border-radius: 2px 2px 2px 2px;
+    transition: all .1s ease-out 0s;
+    display: inline-block;
+    height: 40px;
+    padding: 12px 1.5rem;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1rem;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    letter-spacing: -.1px;
+    line-height: 1;
+    box-shadow: none;
+    margin: 5px;
+    cursor:pointer
+}
+#demo {
+    background-color: rgb(8, 142, 8);
+    border-radius: 100px;
+    color:beige
+}
+.profile {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-dropdown {
+    right:0;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.profile-dropdown a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.search-container-2 input[type='text'] {
+    width: 250px;
+    padding: 9px;
+    margin-left: 1px;
+  
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+.search-container-2 button {
+    padding: 8px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: green;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.search-container-2 button:hover {
+    background: rgb(117, 115, 115);
+}

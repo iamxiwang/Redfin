@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&family=Open+Sans:wght@300&display=swap');
+
+
+.userfeed {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-star;
+    /* align-items: center; */
+    margin: 80px;
+   
+}
+
+
+
+.FeedHomeSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* align-items: center; */
+    color: black;
+    /* padding-left: 500px;
+    padding-right: 500px; */
+    margin-left: 60px;
+    /* margin-right: 50px; */
+    text-align: left;
+}
+
+.ItemPikerPill {
+    display: flex;
+    justify-content: space-between;
+    width: 1170px;
+}
+#ItemPikerPill-right {
+    display: flex;
+    align-items: center;
+
+}
+
+#ItemPikerPill-left{
+    display: flex;
+    justify-content: flex-end;
+}
+#v2,#v2-1 {
+    font-family: 'Libre Franklin', sans-serif;
+    border-radius: 100px;
+    margin: 5px;
+    height: 40px;
+    padding: 12px 1.5rem 12px 1.5rem;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    letter-spacing: -.1px;
+    line-height: 1;
+    box-shadow: none;
+    cursor:pointer
+  
+ 
+}
+#v2-1{
+    background-color: darkgreen;
+    color:aliceblue
+}
+
+.row-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#index-card{
+    width: 373px;
+    height: 250px;
+}
+.interactive {
+    margin:10px;
+}
+.details {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 50;
+    display:flex;
+    margin: 2px;
+
+}
+
+#dollor, #bedbath, #homeaddress {
+    font-size: 14px;
+    margin: 3px
+}
+#dollor {
+font-family: 'Libre Franklin', sans-serif;;
+   font-size:larger;
+   font-weight: bold;
+}
+
+#sqft {
+    display: flex;
+}
+#bedbath {
+    margin-right: 10px;
+}

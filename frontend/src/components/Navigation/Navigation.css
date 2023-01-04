@@ -1,0 +1,130 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap');
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Libre Franklin', sans-serif;
+    /* color: white; */
+}
+
+/* right side of the navbar */
+.header-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px;
+}
+
+#logo {
+    font-family: 'Days One', sans-serif;
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+
+.menue_item_clickable {
+    padding: 0 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+#sign_log , #demo {
+    color:black;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border-radius: 2px 2px 2px 2px;
+    transition: all .1s ease-out 0s;
+    display: inline-block;
+    height: 40px;
+    padding: 12px 1.5rem;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1rem;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    letter-spacing: -.1px;
+    line-height: 1;
+    box-shadow: none;
+    margin: 5px;
+    cursor:pointer
+}
+#demo {
+    background-color: rgb(8, 142, 8);
+    border-radius: 100px;
+    color:beige
+}
+.profile {
+    position: relative;
+    display: inline-block;
+    right:0
+}
+
+ul.profile-dropdown {
+    display: flex;
+    justify-content:space-around;
+    margin-right: -10px;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 500px;
+    height: 400px;
+    padding-left: 0px;
+}
+
+#my-greenfin li, #my-setting li {
+    color: #767676;
+    padding-top:4px;
+    margin: 3px;
+    width:200px;
+    text-decoration: none;
+    display: block;
+
+}
+#my-greenfin, #my-setting {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    margin-top: 10px;
+    width:200px
+    
+}
+li#greenfin-v1, li#setting-v1 {
+    color:black;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+li {
+    font-weight: 'Libre Franklin', sans-serif;
+    font-size: 13px;
+
+}
+
+li#profile-dropdown-button {
+    padding-top:10px;
+    margin:10px;
+
+}
+
+li button {
+    background-color: #ccc;
+    height: 30px;;
+    width:90px;
+    border-radius: 4px 4px 4px 4px;
+    transition: all .1s ease-out 0s;
+}
+
