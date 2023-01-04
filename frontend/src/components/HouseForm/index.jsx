@@ -100,7 +100,6 @@ const HouseForm =() =>{
             zip: zip
 
         }
-        console.log(agentId,state)
         if(formType === 'Create Listing'){
             dispatch(createListing(listing))
         }else{

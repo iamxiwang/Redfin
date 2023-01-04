@@ -38,23 +38,23 @@ function Navigation() {
   }
 
   return (
-    <div class='home-hero-outer-2'>
+    <div className='home-hero-outer-2'>
     
-        <div class='header-left-2'>
+        <div className='header-left-2'>
             <NavLink id='logo-2' exact to="/">GREENFIN</NavLink>
             <form className="search-container-2">
               <input type="text" placeholder="Search.." name="search" />
-              <button type="submit"><i class="fa fa-search"></i></button>
+              <button type="submit"><i className="fa fa-search"></i></button>
             </form>
         </div>
         
                 
-        <div class='header-right-2' >
+        <div className='header-right-2' >
             <h3>1-844-759-7732</h3>
-            <NavLink class='menue_item_clickable-2' exact to='/'>Buy</NavLink>
-            <NavLink class='menue_item_clickable-2' exact to='/'>Rent</NavLink>
-            <NavLink class='menue_item_clickable-2' exact to='/'>Sell</NavLink>
-            <NavLink class='menue_item_clickable-2' exact to='/'>Morgage</NavLink>
+            <NavLink className='menue_item_clickable-2' exact to='/'>Buy</NavLink>
+            <NavLink className='menue_item_clickable-2' exact to='/'>Rent</NavLink>
+            <NavLink className='menue_item_clickable-2' exact to='/'>Sell</NavLink>
+            <NavLink className='menue_item_clickable-2' exact to='/'>Morgage</NavLink>
            
             {sessionLinks}
         </div>

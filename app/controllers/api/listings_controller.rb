@@ -33,8 +33,11 @@ class Api::ListingsController < ApplicationController
     end
 
     def destroy
-        @listing.destroy
-        head :no_content #return header only
+        @listing = Listing.find_by(id: params[:id])
+        if @listing.destroy
+            # head :no_content #return header only
+            render json: {message: 'Listing is successfully removed'}
+        end
     end
 
     private

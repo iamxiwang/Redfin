@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-ApplicationRecord.transaction do 
+# ApplicationRecord.transaction do 
     puts "Destroying tables..."
     # Unnecessary if using `rails db:seed:replant`
     User.destroy_all
@@ -17,7 +17,7 @@ ApplicationRecord.transaction do
 
     puts "Creating users..."
     # Create one user with an easy to remember username, email, and password:
-    User.create!(
+    demo = User.create!(
         username: 'Demo-lition', 
         email: 'demo@user.io', 
         password: 'password'
@@ -32,9 +32,12 @@ ApplicationRecord.transaction do
     end
 
     puts "Done!"
-end
+# end
 
-Listing.create!(
+Listing.destroy_all
+ApplicationRecord.connection.reset_pk_sequence!('listings')
+
+l1 = Listing.create!(
         agent_id: 3,
         status: 'Open house SUN 12pm 50 2 pm',
         street_address: "2601 Union St,",
@@ -59,7 +62,7 @@ Listing.create!(
         )
 
 
-Listing.create!(
+l2 = Listing.create!(
         agent_id: 8,
         status: 'active',
         street_address: "41-43 Parker Ave,",
@@ -88,7 +91,7 @@ Listing.create!(
 
 
 
-Listing.create!(
+l3 = Listing.create!(
             agent_id: 9,
             status: 'Active',
             street_address: "207 Cherry St,",
@@ -111,3 +114,39 @@ Listing.create!(
             greenfin_estimate: 75308,
             price_per_sqft: 2200
             )
+
+
+Comment.create!(
+    listing_id: l1.id,
+    body: 'The house is stunning',
+    author_id: demo.id,
+)
+
+Comment.create!(
+    listing_id: l1.id,
+    body: 'Althought it is very nice house, but it is too expensive',
+    author_id: demo.id,
+)
+Comment.create!(
+    listing_id: l2.id,
+    body: 'The house is too small for a 4 kids family',
+    author_id: demo.id,
+)
+Comment.create!(
+    listing_id: l2.id,
+    body: 'I love it',
+    author_id: demo.id,
+)
+Comment.create!(
+    listing_id: l3.id,
+    body: 'Good place for a samll size of family',
+    author_id: demo.id,
+)
+
+Comment.create!(
+    listing_id: l3.id,
+    body: 'Best hight school in san francisco nearby',
+    author_id: demo.id,
+)
+
+

@@ -10,7 +10,7 @@ const Map =({prop}) => {
     const lngValue = parseFloat(prop.lng)
     const center = useMemo( () => ({lat: latValue,lng: lngValue}), [])
     if(!isLoaded){
-        return <div>Loading...  <i class="fa-duotone fa-spinner"></i></div>
+        return <div>Loading...  <i className="fa-duotone fa-spinner"></i></div>
     }else{
         return (
             <GoogleMap

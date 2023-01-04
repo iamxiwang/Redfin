@@ -17,16 +17,16 @@ a {
     font-size: 17px;
 }
 .search-container input[type='text'] {
-    width: 50%;
-    padding: 9px;
+    width: 30%;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    margin-top: 8px;
+    margin-top: 7px;
     margin-bottom: 22px;
     resize: vertical;
 }
-* {box-sizing: border-box;}
+/* * {box-sizing: border-box;} */
 
 .search-container button {
     padding: 8px 10px;
@@ -34,7 +34,8 @@ a {
     margin-right: 16px;
     background: #ddd;
     font-size: 17px;
-    border: none;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
     cursor: pointer;
 }
 
@@ -44,7 +45,7 @@ a {
 #inner-search {
    /* padding:100px; */
     padding-left: 150px;
-    padding-top:50px;
+    padding-top:50px;                                                                                      
     padding-bottom: 150px;
 
 }

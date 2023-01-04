@@ -46,10 +46,10 @@ function Navigation() {
         {}
         <div className='header-right' >
             <h3>1-844-759-7732</h3>
-            <NavLink class='menue_item_clickable' exact to='/'>Buy</NavLink>
-            <NavLink class='menue_item_clickable' exact to='/'>Rent</NavLink>
-            <NavLink class='menue_item_clickable' exact to='/'>Sell</NavLink>
-            <NavLink class='menue_item_clickable' exact to='/'>Morgage</NavLink>
+            <NavLink className='menue_item_clickable' exact to='/'>Buy</NavLink>
+            <NavLink className='menue_item_clickable' exact to='/'>Rent</NavLink>
+            <NavLink className='menue_item_clickable' exact to='/'>Sell</NavLink>
+            <NavLink className='menue_item_clickable' exact to='/'>Morgage</NavLink>
            
             {sessionLinks}
         </div>

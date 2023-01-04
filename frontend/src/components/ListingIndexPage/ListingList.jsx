@@ -5,7 +5,7 @@ const ListingList = ({listings}) => {
 
     return (
         <> 
-        {listings.map( listing => <ListingListItem listing ={listing}/>)}
+        {listings.map( (listing, i) => <ListingListItem key={i} listing ={listing}/>)}
         </>
     )
 }

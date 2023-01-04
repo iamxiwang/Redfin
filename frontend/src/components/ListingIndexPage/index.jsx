@@ -12,7 +12,8 @@ const ListingIndexPage =() => {
 
     useEffect( () => {
         dispatch(fetchListings())
-    },[dispatch])
+
+    },[])
 
     return (
     <div className='userfeed'>
@@ -30,7 +31,7 @@ const ListingIndexPage =() => {
                     <button id='v2'>Status Change</button>
                 </div>
                 <div id='ItemPikerPill-right'>
-                    <i class="fa-solid fa-cog fa-2x"></i>
+                    <i className="fa-solid fa-cog fa-2x"></i>
                 </div>
             </div>
             <div className='row-flex'>

@@ -8,6 +8,10 @@
     justify-content: space-between;
     align-items: center;
     font-family: 'Libre Franklin', sans-serif;
+    z-index: 110;
+    position: relative;
+    background-color: #fff;
+    border-bottom: 1px solid #e2e2e2;
 
 } 
 .header-left-2{
@@ -18,6 +22,9 @@
 
 .menue_item_clickable-2 {
     color: black;
+    padding: 0 20px;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 /* right side of the navbar */
@@ -26,7 +33,7 @@
     justify-content: flex-end;
     align-items: center;
     margin-top: 10px;
-    margin-right: 0px;
+    margin-right: 20px;
 }
 
 #logo-2 {

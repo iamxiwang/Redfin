@@ -113,7 +113,7 @@ const listingsReducer =( state={}, action) => {
             return {...state,[action.payload.id]: action.payload}
         case REMOVE_LISTING:
             const newState = {...state};
-            delete newState[action.payload.id];
+            delete newState[action.payload];
             return newState;
         default:
             return state

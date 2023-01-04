@@ -32,7 +32,7 @@ function ProfileButton({ user }) {
   return (
     <>
     <div className='profile'>
-        <button onMouseEnter={openMenu}><i class="fa-solid fa-user"></i></button>
+        <button onMouseEnter={openMenu}><i className="fa-solid fa-user"></i></button>
         {showMenu && (
             <ul className="profile-dropdown">
               <div id='my-greenfin'>
