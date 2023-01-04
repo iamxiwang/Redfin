@@ -20,13 +20,17 @@
     align-items: center;
 
 }
-.header-line img {
-    border-radius: 50%;
-    width:32px;
+.header-line .fa-solid.fa-circle-user{
+    margin-top:10px;
+}
+
+i.fa-solid.fa-circle-user {
+    font-size: 30px;
+    margin-top: -13px;
 }
 .commenter-info {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 350px
 
@@ -37,10 +41,10 @@
     justify-content: space-between;
 }
 
-.commenter-info img{
+/* .commenter-info img{
     border-radius: 50%;
     width:32px;
-}
+} */
 
 .three-dot {
     background-color: white;
@@ -76,7 +80,7 @@
     color: #585858;
     border-radius: 2px;
     position: absolute;
-    right: 500px;
+    right: 487px;
     cursor: pointer;
 }
 
@@ -108,5 +112,5 @@ i.fa-solid.fa-ellipsis {
 .comment-container p {
     color: #999;
     margin-top: 0;
-    margin-left: 10px;
+    margin-left: 5px;
 }

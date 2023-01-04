@@ -18,20 +18,21 @@ a {
 }
 .search-container input[type='text'] {
     width: 30%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 7px;
-    margin-bottom: 22px;
-    resize: vertical;
+    /* padding: 10px; */
+    /* border: 1px solid #ccc; */
+    /* border-radius: 4px; */
+    /* box-sizing: border-box; */
+    /* margin-top: 7px;
+    margin-bottom: 22px; */
+    /* resize: vertical; */
 }
 /* * {box-sizing: border-box;} */
 
 .search-container button {
-    padding: 8px 10px;
-    margin-top: 10px;
-    margin-right: 16px;
+    /* padding: 8px 10px; */
+    /* margin-top: 10px;
+    margin-right: 16px; */
+    height:42px;
     background: #ddd;
     font-size: 17px;
     border: 1px solid #ccc; 
@@ -56,4 +57,7 @@ h1 {
     font-weight: 1000;
     line-height: 2.75rem;
     margin: 0 0 0.5rem;
+}
+.search-container {
+    margin-top: 20px;
 }
