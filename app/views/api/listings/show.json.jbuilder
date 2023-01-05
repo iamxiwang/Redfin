@@ -7,5 +7,5 @@ json.extract! @listing, :id, :agent_id,
     :year_built, :lat, :lng, 
     :est_mo_payment,:greenfin_estimate, :price_per_sqft
 
-json.photoUrl @listing.photos.map{|photo| photo.url}
+
 
