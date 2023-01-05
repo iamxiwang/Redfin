@@ -62,6 +62,13 @@ l1 = Listing.create!(
         )
 
 
+l1.photos.attach([
+    {io: URI.open(""),filename: ""},
+    {io: URI.open(""),filename: ""},
+    {io: URI.open(""),filename: ""},
+
+])
+
 l2 = Listing.create!(
         agent_id: 8,
         status: 'active',
@@ -86,7 +93,13 @@ l2 = Listing.create!(
         price_per_sqft: 1328
         )
 
+        
+l1.photos.attach([
+    {io: URI.open(""),filename: ""},
+    {io: URI.open(""),filename: ""},
+    {io: URI.open(""),filename: ""},
 
+])
 
 
 
@@ -114,6 +127,14 @@ l3 = Listing.create!(
             greenfin_estimate: 75308,
             price_per_sqft: 2200
             )
+
+        
+l1.photos.attach([
+    {io: URI.open(""),filename: ""},
+    {io: URI.open(""),filename: ""},
+    {io: URI.open(""),filename: ""},
+
+])
 
 
 Comment.create!(
