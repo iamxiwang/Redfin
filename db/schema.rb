@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_05_052920) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_01_235514) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -66,8 +66,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_05_052920) do
     t.integer "sqft", null: false
     t.integer "lot", null: false
     t.text "description"
-    t.string "img_url", null: false
-    t.integer "garage", null: false
     t.integer "year_built", null: false
     t.float "lat", null: false
     t.float "lng", null: false

@@ -12,7 +12,7 @@ const ListingListItem = ({listing}) => {
 
     return (
         <div className='interactive' onClick={handleClick}>
-            <img id='index-card'src={listing.imgUrl} />
+            <img id='index-card'src={listing.photoUrl[0]} />
             <div className="details">
             <h3 id='dollor'>{price}</h3>
             <div id='sqft'>
