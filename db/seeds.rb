@@ -63,7 +63,7 @@ l1 = Listing.create!(
 
 
 l1.photos.attach([
-    {io: URI.open(""),filename: ""},
+    {io: URI.open( "https://ssl.cdn-redfin.com/photo/27/islphoto/087/genIslnoResize.422705087_8.jpg"),filename: "l1main.jpg"},
     {io: URI.open(""),filename: ""},
     {io: URI.open(""),filename: ""},
 
