@@ -45,4 +45,5 @@ class Listing < ApplicationRecord
         foreign_key: :listing_id,
         class_name: :Comment
 
+    has_many_attached :photos
 end

@@ -6,3 +6,6 @@ json.extract! @listing, :id, :agent_id,
     :description,:img_url, :garage, 
     :year_built, :lat, :lng, 
     :est_mo_payment,:greenfin_estimate, :price_per_sqft
+
+json.photoUrl @listing.photos.first.url
+
