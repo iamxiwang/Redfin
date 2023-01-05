@@ -61,16 +61,9 @@ l1 = Listing.create!(
 
 
 l1.photos.attach([
-<<<<<<< HEAD
-    {io: URI.open( "https://ssl.cdn-redfin.com/photo/27/islphoto/087/genIslnoResize.422705087_8.jpg"),filename: "l1main.jpg"},
-    {io: URI.open(""),filename: ""},
-    {io: URI.open(""),filename: ""},
-
-=======
     {io: URI.open("https://ssl.cdn-redfin.com/photo/9/bigphoto/295/422701295_0.jpg"),filename: "l1main.jpg"},
     {io: URI.open("https://ssl.cdn-redfin.com/photo/9/bigphoto/295/422701295_11_0.jpg"),filename: "l1second.jpg"},
     {io: URI.open("https://ssl.cdn-redfin.com/photo/9/bigphoto/295/422701295_38_0.jpg"),filename: "l1third.jpg"}
->>>>>>> deploy
 ])
 
 l2 = Listing.create!(
