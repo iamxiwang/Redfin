@@ -1,14 +1,14 @@
 databases:
-  - name: authenticate-me
-    user: authenticate_me
+  - name: greenfin
+    user: greenfin
     plan: free
-    region: ohio
+    region: oregon
 
 services:
   - type: web
-    name: authenticate-me
+    name: greenfin
     plan: free
-    region: ohio
+    region: oregon
     branch: main
     env: ruby
     buildCommand: "./bin/render-build.sh"
@@ -16,7 +16,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: authenticate-me
+          name: greenfin
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
