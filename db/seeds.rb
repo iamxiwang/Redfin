@@ -362,6 +362,38 @@ l10.photos.attach([
 
 ])
 
+# l11
+
+l10 = Listing.create!(
+            agent_id: 4,
+            status: 'Active',
+            street_address: "2121 Webster St Ph 1-7,",
+            city: 'San Francisco',
+            state: 'CA',
+            zip: 94115,
+            property_type: 'Singel Family Residential',
+            list_price: 19995000,
+            beds: 5,
+            baths: 5.5,
+            sqft: 5310,
+            lot: 1009,
+            description: "Following three years of design & build, the just-completed Penthouse 1-7 at The Pacific showcases large-scale rooms with soaring ceilings, windows on three sides, contemporary designs, and topline infrastructure - atop one of San Francisco's most admired buildings. Masterfully created with materials certified organic & toxin-free, this five-bedroom, five & one-half bath penthouse spans 5,310sf while providing a palette of warm finishes rich in texture - from walnut millwork to undulating floors of travertine. For safety & convenience, advanced infrastructure amenities include automated control of lighting, shades, climate, media & security. The Pacific's in-demand amenities include 24/7 door-staff, concierge, fitness room, hotel-style suite for guests, landscaped gardens, fireside library & rooftop terrace with fireboxes to enjoy views of Pacific Heights landmarks. Centrally located amidst the coffee houses, bistros, bookstores, and stylish boutiques of the Fillmore Corridor.",
+            year_built: 2016,
+            lat: 37.79040598653918, 
+            lng: -122.43284174461239,
+            est_mo_payment: 133060,
+            greenfin_estimate: 200005000,
+            price_per_sqft: 3766
+            )
+
+        
+l10.photos.attach([
+    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/bigphoto/130/421612130_0.jpg"),filename: "l10main.jpg"},
+    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/mbpaddedwide/130/genMid.421612130_6_1.jpg"),filename: "l10second.jpg"},
+    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/mbpaddedwide/130/genMid.421612130_19_1.jpg"),filename: "l10third.jpg"}
+
+])
+
 
 
 Comment.create!(

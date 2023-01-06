@@ -10,6 +10,7 @@ import './ListingShow.css'
 import { fetchComments, getComments } from "../../store/comment";
 import Comments from '../Comments'
 import ListingDetails from "./ListingDetails";
+import HomeFacts from "./HomeFacts";
 
 
 
@@ -34,6 +35,8 @@ const ListingShowPage = () => {
                     {user &&
                     <Comments listingId = {listingId}/>
                     }
+
+                    <HomeFacts listing ={listing}/>
         
                 </div>
             )

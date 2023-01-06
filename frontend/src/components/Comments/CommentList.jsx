@@ -18,8 +18,8 @@ const CommentList = ({comment}) => {
         <div className="comment-list">
             <div className="comment-npm">
                 <div className="commenter-info">
-                    {/* <img src="	https://ssl.cdn-redfin.com/system_files/images/76/076/51600076_158_0.jpg" alt="" /> */}
-                    <i className="fa-solid fa-circle-user"></i>
+                    <img src={comment.profileImgUrl} alt="" />
+                    {/* <i className="fa-solid fa-circle-user"></i> */}
                     <p>{user.username}</p>
                     <p>{comment.createdAt}</p>
                 </div>

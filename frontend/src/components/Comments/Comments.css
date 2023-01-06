@@ -3,7 +3,7 @@
 .comment-container {
     /* font-family: 'Libre Franklin', sans-serif; */
     margin-left:180px;
-    margin-bottom: 200px;
+    margin-bottom: 50px;
     width: 780px;
 }
 .comment-container{
@@ -39,13 +39,25 @@ i.fa-solid.fa-circle-user {
 .comment-npm {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 9px;
+    margin-top: 9px;
 }
 
-/* .commenter-info img{
+.commenter-info img, .header-line img{
     border-radius: 50%;
-    width:32px;
-} */
+    width:50px;
+    clip-path: circle();
+    margin-bottom: 15px;
 
+}
+
+.header-line img{
+    border-radius: 50%;
+    width:50px;
+    clip-path: circle();
+    margin-bottom: 0px;
+
+}
 .three-dot {
     background-color: white;
     border: none;
@@ -112,5 +124,5 @@ i.fa-solid.fa-ellipsis {
 .comment-container p {
     color: #999;
     margin-top: 0;
-    margin-left: 5px;
+    margin-left: 4px;
 }

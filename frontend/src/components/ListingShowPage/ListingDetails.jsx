@@ -51,7 +51,10 @@ const ListingDetails = ({listing}) => {
                             <div id='abp-number'>{sqftValue}</div>
                             <div id='abp-string'>Sqft</div>
                         </div>
-                        <Map prop ={listing}/>
+                        <div className="rightSmallMap">
+                            <Map prop ={listing}/>
+                        </div>
+                        
                     </div>
                     <Appointment />
                 </div>

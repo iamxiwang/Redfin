@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+
+import { useParams, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {getListing, fetchListing, createListing, updateListing} from '../../store/listings'
 import Navigation from '../HeadBar';
@@ -9,6 +10,7 @@ import'./HouseForm.css'
 const HouseForm =() =>{
     const {listingId} = useParams()
     const dispatch = useDispatch()
+    const history = useHistory();
     const formType = listingId ? 'Update Lisitng' : 'Create Listing'
     let listing = useSelector(getListing(listingId))
 
@@ -20,9 +22,7 @@ const HouseForm =() =>{
             city: '',
             description: '',
             estMoPayment: '',
-            garage: '',
             greenfinEstimate: '',
-            imgUrl: '',
             lat: '',
             listPrice: '',
             listingDate: '',
@@ -83,9 +83,7 @@ const HouseForm =() =>{
             city: city,
             description: description,
             est_mo_payment: estMoPayment,
-            garage: garage,
             greenfin_estimate: greenfinEstimate,
-            img_url: imgUrl,
             lat: lat,
             list_price: listPrice,
             lng: lng,
@@ -105,6 +103,7 @@ const HouseForm =() =>{
         }else{
             dispatch(updateListing(listing))
         }
+        history.push('/')
     }
 
 
@@ -142,18 +141,18 @@ const HouseForm =() =>{
                     <input type="number" value={estMoPayment}
                     onChange={(e) => setEstMoPayment(e.target.value)}  />
                 </label>
-                <label >Garage:
+                {/* <label >Garage:
                     <input type="number" value={garage}
                     onChange={(e) => setGarage(e.target.value)}  />
-                </label>
+                </label> */}
                 <label >Greenfin Estimate:
                     <input type="number" value={greenfinEstimate}
                     onChange={(e) => setGreenfinEstimate(e.target.value)}  />
                 </label>
-                <label >Image Url:
+                {/* <label >Image Url:
                     <input type="text" value={imgUrl}
                     onChange={(e) => setImgUrl(e.target.value)}  />
-                </label>
+                </label> */}
                 <label >Latitute:
                     <input type="number" value={lat}
                     onChange={(e) => setLat(e.target.value)}  />

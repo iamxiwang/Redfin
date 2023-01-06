@@ -32,8 +32,8 @@ const Comments = ({listingId}) =>{
         <div className="comment-container">
             <div className='header-line'>
                 <h2>Your comments</h2>
-                {/* <img src="	https://ssl.cdn-redfin.com/system_files/images/76/076/51600076_158_0.jpg" alt="" /> */}
-                <i className="fa-solid fa-circle-user"></i>
+                <img src={user.imgUrl} />
+                {/* <i className="fa-solid fa-circle-user"></i> */}
             </div>
 
             {comments.map(
