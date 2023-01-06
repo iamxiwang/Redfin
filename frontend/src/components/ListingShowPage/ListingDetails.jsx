@@ -19,10 +19,10 @@ const ListingDetails = ({listing}) => {
             <div className="single-listing-container">
             <div className="subheader">subheader</div>
             <div className="img-container">
-                <img id ='single-listing-img' src={listing.imgUrl} alt="" />
+                <img id ='single-listing-img' src={listing.photoUrl[0]} alt="" />
                 <div id='img-right'>
-                    <img src="https://ssl.cdn-redfin.com/photo/10/bigphoto/497/40953497_0.jpg" alt="" />
-                    <img src="	https://ssl.cdn-redfin.com/photo/9/bigphoto/702/422690702_0.jpg" alt="" />
+                    <img src={listing.photoUrl[1]} alt="" />
+                    <img src={listing.photoUrl[2]} alt="" />
                 </div>
             </div>
             <div className="listing-main-stats">
