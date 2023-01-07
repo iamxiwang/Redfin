@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
 
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
+  const history = useHistory();
   const [showMenu, setShowMenu] = useState(false);
   
   const openMenu = () => {
@@ -32,7 +35,13 @@ function ProfileButton({ user }) {
   return (
     <>
     <div className='profile'>
-        <button onMouseEnter={openMenu}><i className="fa-solid fa-user"></i></button>
+        <button onMouseEnter={openMenu} id='img-btn'>
+        {
+          user.imgUrl?
+          <img src={user.imgUrl} alt="" /> :
+          <i className="fa-solid fa-user"></i>
+        }
+          </button>
         {showMenu && (
             <ul className="profile-dropdown">
             <div id='my-greenfin'>

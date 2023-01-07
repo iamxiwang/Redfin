@@ -3,12 +3,13 @@ import ListingList from './ListingList'
 import {getListings, fetchListings} from '../../store/listings'
 import { useEffect } from 'react'
 import './ListingIndex.css'
+import SearchMap from '../GoolgeMap/SearchMap'
 
 
 const ListingIndexPage =() => {
     const dispatch = useDispatch()
     const listings = useSelector(getListings)
-
+    // console.log(listings)
 
     useEffect( () => {
         dispatch(fetchListings())
@@ -36,6 +37,11 @@ const ListingIndexPage =() => {
             </div>
             <div className='row-flex'>
             <ListingList listings = {listings} />
+            </div>
+            
+            <div className='testmap'>
+
+            <SearchMap listings={listings} />
             </div>
         </div>
     </div>

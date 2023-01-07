@@ -1,4 +1,15 @@
-.map-container {
+.rightSmallMap .map-container {
     width:100px;
-    height:100px
+    height:100px;
+}
+
+.aboutHomeMap .map-container {
+    width:780px;
+    height: 250px;
+}
+
+
+.testmap .map-container {
+    width:780px;
+    height: 250px;
 }

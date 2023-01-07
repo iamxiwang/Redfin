@@ -1,8 +1,7 @@
 import HouseForm from "../HouseForm"
-import Map from "../GoolgeMap";
 import Appointment from "../Appointment";
 import { useState } from "react";
-
+import SearchMap from "../GoolgeMap/SearchMap";
 
 const ListingDetails = ({listing}) => {
         const[showForm, setShowForm] = useState(false)
@@ -12,9 +11,6 @@ const ListingDetails = ({listing}) => {
         const bathValue = listing.baths.toString()
         const sqftValue = new Intl.NumberFormat().format(listing.sqft)
         const estMonthlyPayment = 'Est. '+ '$' + new Intl.NumberFormat().format(listing.estMoPayment) + '/mo'
-
-
-
         return (
             <div className="single-listing-container">
             <div className="subheader">subheader</div>
@@ -51,7 +47,10 @@ const ListingDetails = ({listing}) => {
                             <div id='abp-number'>{sqftValue}</div>
                             <div id='abp-string'>Sqft</div>
                         </div>
-                        <Map prop ={listing}/>
+                        <div className="rightSmallMap">
+                            <SearchMap listings={[listing]} />
+                        </div>
+                        
                     </div>
                     <Appointment />
                 </div>

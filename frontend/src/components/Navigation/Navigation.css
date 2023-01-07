@@ -91,6 +91,7 @@ ul.profile-dropdown {
     width:200px;
     text-decoration: none;
     display: block;
+    cursor: pointer;
 
 }
 #my-greenfin, #my-setting {
@@ -128,3 +129,18 @@ li button {
     transition: all .1s ease-out 0s;
 }
 
+
+.profile #img-btn {
+    background-color: transparent;
+    border: none;
+}
+.profile img {
+    border-radius: 50%;
+    width:37px;
+    clip-path: circle();
+}
+
+i.fa-solid.fa-user{
+    font-size: 20px;
+    color:darkgreen;;
+}

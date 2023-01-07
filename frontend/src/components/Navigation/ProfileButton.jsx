@@ -32,7 +32,13 @@ function ProfileButton({ user }) {
   return (
     <>
     <div className='profile'>
-        <button onMouseEnter={openMenu}><i className="fa-solid fa-user"></i></button>
+        <button onMouseEnter={openMenu} id='img-btn'>
+          {
+          user.imgUrl?
+          <img src={user.imgUrl} alt="" /> :
+          <i className="fa-solid fa-user"></i>
+        }
+          </button>
         {showMenu && (
             <ul className="profile-dropdown">
               <div id='my-greenfin'>
