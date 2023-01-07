@@ -13,15 +13,14 @@ const Appointment =() => {
         <>
         <div className= 'appointment-container'> 
             <form className='appointment-form' >
-                <h1>Appointment</h1>
-                <label >email
-                    <input type="text" name="" id="" />
+                <h2>Go tour this home</h2>
+                <label >DateTime
+                    <input type="datetime-local" />
                 </label>
                 <label >phone
-                    <input type="text" name="" id="" />
+                    <input type="tel"  />
                 </label>
-
-
+                <button className='scheduleTourBtn'>Schedule tour</button>
             </form>
         
         </div>

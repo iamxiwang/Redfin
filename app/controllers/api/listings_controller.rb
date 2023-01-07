@@ -40,6 +40,12 @@ class Api::ListingsController < ApplicationController
         end
     end
 
+    def search 
+        query = params[:query]
+        @listings = Listing.where()
+        render :index
+    end
+
     private
 
     def listing_params

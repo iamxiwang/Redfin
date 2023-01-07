@@ -11,7 +11,10 @@ Rails.application.routes.draw do
     end
     resources :comments, only: [:show,:create,:update,:destroy]
 
+    get '/listings/search', to: 'listings#search'
+
   end
+
 
   # post 'api/test', to: 'application#test' 
   get '*path', to: "static_pages#frontend_index"

@@ -51,7 +51,7 @@ function ProfileButton({ user }) {
               <li>Open houses schedule</li>
               <li>Home tours</li>
               <li>Owner Dashboard</li>
-              <li onClick={history.push('/listings/new')}>Agent</li>
+              <li>Agent</li>
               <li>Offers</li>
               <li>Reviews</li>
             </div>

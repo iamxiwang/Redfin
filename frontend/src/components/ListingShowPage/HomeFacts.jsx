@@ -1,4 +1,5 @@
 import Map from "../GoolgeMap";
+import SearchMap from "../GoolgeMap/SearchMap";
 
 
 const HomeFacts = ({listing}) => {
@@ -6,7 +7,8 @@ const HomeFacts = ({listing}) => {
             <div className="about-this-home">
                 <h2>About This Home</h2>
                 <div className='aboutHomeMap'>
-                <Map prop ={listing} />
+                {/* <Map listing ={listing} /> */}
+                <SearchMap listings={[listing]} />
                 </div>
 
             </div>
