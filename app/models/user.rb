@@ -33,6 +33,10 @@ class User < ApplicationRecord
     foreign_key: :author_id,
     class_name: :Comment
 
+  has_many :tours,
+    foreign_key: :user_id,
+    class_name: :Appointment
+
   has_one_attached :img
 
   # SPIRE

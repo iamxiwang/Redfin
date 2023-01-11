@@ -38,11 +38,6 @@ const ListingIndexPage =() => {
             <div className='row-flex'>
             <ListingList listings = {listings} />
             </div>
-            
-            <div className='testmap'>
-
-            <SearchMap listings={listings} />
-            </div>
         </div>
     </div>
     )

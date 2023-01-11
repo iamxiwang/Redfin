@@ -49,7 +49,7 @@ function ProfileButton({ user }) {
               <li>Favorites</li>
               <li>Saved Searches</li>
               <li>Open houses schedule</li>
-              <li>Home tours</li>
+              <li onClick={() => history.push('/mygreenfin/tours')}>Home tours</li>
               <li>Owner Dashboard</li>
               <li>Agent</li>
               <li>Offers</li>

@@ -5,7 +5,6 @@ import listingsReducer, {getListing,getListings,fetchListing} from '../../store/
 import Navigation from "../HeadBar";
 import Appointment from "../Appointment";
 import HouseForm from "../HouseForm"
-import Map from "../GoolgeMap";
 import './ListingShow.css'
 import { fetchComments, getComments } from "../../store/comment";
 import Comments from '../Comments'
@@ -37,7 +36,7 @@ const ListingShowPage = () => {
                     }
 
                     <HomeFacts listing ={listing}/>
-        
+                    {/* <HouseForm /> */}
                 </div>
             )
 

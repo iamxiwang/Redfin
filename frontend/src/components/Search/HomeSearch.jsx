@@ -1,4 +1,5 @@
-import './IndexSearch.css'
+import './Search.css'
+import SearchBar from './SearchBar'
 
 const IndexSearchPage =() => {
 
@@ -15,10 +16,18 @@ const IndexSearchPage =() => {
                     <a href="">Home Estimate</a>
                 </div>
                 <div className="search-container">
-                    <form >
-                    <input type="text" placeholder="Search.." name="search" />
-                    <button id='search-button'type="submit"><i className="fa fa-search"></i></button>
-                    </form>
+                    <SearchBar />
+                    {/* <form onSubmit={handleSubmit}>
+                        <input type="text" placeholder="Search.." 
+                        value={searchValue} 
+                        onChange={(e) => (setSearchValue(e.target.value))}/>
+
+                        <button 
+                        id='search-button'
+                        >
+                            <i className="fa fa-search"><Link to='/listings/search' ></Link></i>
+                    </button>
+                    </form> */}
                 </div>
             </div>
         </div>

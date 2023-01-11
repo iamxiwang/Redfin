@@ -12,6 +12,7 @@ class Api::ListingsController < ApplicationController
     end
 
     def create
+        # debugger
         @listing = Listing.new(listing_params)
 
         if @listing.save!
@@ -23,8 +24,9 @@ class Api::ListingsController < ApplicationController
 
 
     def update 
+        debugger
         @listing = Listing.find_by(id: params[:id])
-        if @listing.update(listing_params)
+        if @listing.update!(listing_params)
             #  && @listing.listing_agent_id === current_user.id
             render :show
         else
@@ -40,10 +42,19 @@ class Api::ListingsController < ApplicationController
         end
     end
 
+
+
+    # api_listings_search GET    /api/listings/search(.:format)       
     def search 
+        # debugger
         query = params[:query]
-        @listings = Listing.where()
-        render :index
+        if query.to_i != 0
+            @listings = Listing.where("zip = (?)", query)
+            render :index
+        else
+            @listings = Listing.where("city = (?)", query)
+            render :index
+        end
     end
 
     private
@@ -56,7 +67,8 @@ class Api::ListingsController < ApplicationController
             :sqft, :lot,:description,
             :img_url, :garage, :year_built, 
             :lat, :lng,:est_mo_payment,
-            :greenfin_estimate, :price_per_sqft
+            :greenfin_estimate, :price_per_sqft,
+            photos:[]
             )
     end
 

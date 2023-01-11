@@ -53,6 +53,47 @@ h1 {
     line-height: 2.75rem;
     margin: 0 0 0.5rem;
 }
-.search-container {
-    margin-top: 20px;
+.search-map .map-container {
+    width:600px;
+    height: 1000px
 }
+
+.search-result-page {
+    display: flex;
+}
+
+.filtered-listings {
+    margin-left: 20px;
+}
+
+
+.filtered-listings h1 {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.custom-filter-label {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.custom-filter-label button {
+    background-color: white;
+    font-size: .875rem;
+    margin-top: 10px;
+    margin-right: 16px;
+    height:40px;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    cursor: pointer;
+    padding-top:6px;
+    padding-right: 20px;
+    padding-left: 15px;
+    padding-bottom: 8px;
+    color: #696969;
+
+}
+
+

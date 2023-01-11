@@ -20,7 +20,7 @@ const Map =({listing}) => {
                 zoom={11}
                 center ={{lat: 37.767257858624205, lng: -122.43880342502935}}
                 mapContainerClassName ='map-container'>
-                <MarkerF position ={center} />
+                <MarkerF position ={center}  />
                 {/* <MarkerF position={{ lat: 40.712776, lng: -74.005974 }} /> */}
             </GoogleMap>
         )

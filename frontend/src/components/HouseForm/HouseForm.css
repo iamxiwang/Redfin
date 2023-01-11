@@ -5,7 +5,7 @@
 }
 
 form.house-form {
-    width: 800px;
+    width: 1000px;
     padding: 40px ;
     margin-left: 300px;
 }
@@ -20,3 +20,4 @@ textarea {
     font-size: medium;
     background-color:#065535;
 }
+
