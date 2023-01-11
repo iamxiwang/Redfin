@@ -3,13 +3,15 @@ import thunk from "redux-thunk";
 import listingsReducer from "./listings";
 import sessionReducer from "./session";
 import commentsReducer from'./comment'
+import appointmentsReducer from "./appointment";
 
 
 
 const rootReducer = combineReducers({
     session: sessionReducer,
     listings: listingsReducer,
-    comments: commentsReducer
+    comments: commentsReducer,
+    appointments: appointmentsReducer
 
 });
 

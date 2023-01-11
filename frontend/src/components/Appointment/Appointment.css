@@ -20,4 +20,112 @@
     border-radius: 4px;
     margin-top:9px;
 }
+.mygreenfin-tour-container{
+    background-color: rgb(247, 244, 244);
+    min-height: 600px;
+}
 
+.mygreenfin-tour-container header {
+    max-width: 1260px;
+    width: 82%;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+    display: block;
+    zoom: 1;
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1.25;
+    padding: 14px 0;
+}
+
+.appointment-item{
+    /* display: flex;
+    justify-content: space-between; */
+    background-color: #fff;
+    max-width: 1260px;
+    width: 82%;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    margin-bottom: 15px;
+}
+
+.appointment-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e2e2e2;
+}
+
+.appointment-info h3 {
+    display: inline-block;
+    font-size: 1.375rem;
+    font-weight: 600;
+    line-height: 34px;
+    color: #333;
+    margin-left: 20px;
+}
+.appointment-listing{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+.tour-action-btn button {
+    margin-top: 10px;
+    margin-right: 16px;
+    height:37px;
+    background: rgb(243, 241, 241);
+    font-size: 17px;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    cursor: pointer;
+    padding-top:6px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 8px;
+}
+.reschedule-appointment button{
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: large;
+    width: 100%;
+    background-color: darkgreen;
+    height:50px;
+    color: white;
+    border-radius: 4px;
+    margin-top:9px;
+}
+
+.reschedule-appointment{
+    margin: 40px;
+    height: 380px;
+}
+.reschedule-appointment h1{
+    margin-left: 100px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.current-tour{
+    height: 140px;
+    background-color: #e2e2e2;
+
+}
+.current-tour p{
+    margin-left: 10px;
+    text-align: center;
+    padding-left:30px;
+    padding-top: 20px;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 1rem;
+}
+.current-tour h3{
+    margin-left: 10px;
+    text-align: center;
+    padding-left:30px;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 1.325rem;
+}

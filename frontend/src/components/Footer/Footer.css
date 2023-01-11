@@ -1,0 +1,24 @@
+.foot-section{
+    background-color: rgb(30, 60, 60);
+    height: 200px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.fa-brands, .fab {
+    font-weight: 800;
+    font-size: 3.5rem;
+}
+
+.github-linkedin{
+    width:800px;
+}
+
+.foot-section p{
+    margin-left: 30px;
+    margin-bottom: 0;
+    text-align: end;
+}

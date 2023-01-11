@@ -5,6 +5,8 @@ import SearchMap from "../GoolgeMap/SearchMap";
 
 const ListingDetails = ({listing}) => {
         const[showForm, setShowForm] = useState(false)
+        const zoom = 10;
+        const center = {lat: listing.lat, lng:listing.lng}
 
         const priceValue = '$' + new Intl.NumberFormat().format(listing.listPrice)
         const bedValue = listing.beds.toString() 
@@ -48,11 +50,11 @@ const ListingDetails = ({listing}) => {
                             <div id='abp-string'>Sqft</div>
                         </div>
                         <div className="rightSmallMap">
-                            <SearchMap listings={[listing]} />
+                            <SearchMap listings={[listing]} zoom={zoom} center={center} />
                         </div>
                         
                     </div>
-                    <Appointment />
+                    <Appointment listing={listing}/>
                 </div>
         </div>
         {/* <button id='trigger'  

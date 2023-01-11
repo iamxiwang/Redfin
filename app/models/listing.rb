@@ -16,8 +16,6 @@
 #  sqft              :integer          not null
 #  lot               :integer          not null
 #  description       :text
-#  img_url           :string           not null
-#  garage            :integer          not null
 #  year_built        :integer          not null
 #  lat               :float            not null
 #  lng               :float            not null
@@ -28,6 +26,8 @@
 #  updated_at        :datetime         not null
 #
 class Listing < ApplicationRecord
+    # require "open-uri"
+    # before_validation :generate_default_pic
 
     validates :agent_id, :status ,:city,:state,
         :zip, :property_type, :list_price, :beds, :baths,
@@ -39,11 +39,31 @@ class Listing < ApplicationRecord
         presence: true,
         uniqueness: true
 
+    # validate :ensure_photo
+
 
     has_many :comments,
         foreign_key: :listing_id,
         class_name: :Comment
 
+    has_many :appointments,
+        foreign_key: :listing_id,
+        class_name: :Appointment
+
     has_many_attached :photos
+
+    # def ensure_photo
+    #     unless self.photo.attached?
+    #         errors.add(:photo, "must be attached")
+    #     end
+    # end
+
+    # def generate_default_pic
+    #     unless self.photo.attached?
+    #         # Presumably you have already stored a default pic in your seeds bucket
+    #         file = URI.open("https://greenfin-seeds.s3.amazonaws.com/default_pic.jpg");
+    #         self.photo.attach(io: file, filename: "default.jpg")
+    #     end
+    # end
 
 end

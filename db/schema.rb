@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_05_200019) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_08_214604) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -40,6 +40,20 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_05_200019) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "appointments", force: :cascade do |t|
+    t.bigint "agent_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "listing_id", null: false
+    t.datetime "tour_time", null: false
+    t.string "message"
+    t.boolean "cancelled"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["agent_id"], name: "index_appointments_on_agent_id"
+    t.index ["listing_id"], name: "index_appointments_on_listing_id"
+    t.index ["user_id"], name: "index_appointments_on_user_id"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -93,6 +107,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_05_200019) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "appointments", "listings"
+  add_foreign_key "appointments", "users"
+  add_foreign_key "appointments", "users", column: "agent_id"
   add_foreign_key "comments", "listings"
   add_foreign_key "comments", "users", column: "author_id"
   add_foreign_key "listings", "users", column: "agent_id"

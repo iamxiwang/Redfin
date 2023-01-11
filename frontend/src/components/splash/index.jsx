@@ -1,6 +1,7 @@
 import Navigation from "../Navigation"
-import IndexSearchSection from '../IndexSearchSection'
+import IndexSearchSection from '../Search/HomeSearch'
 import ListingIndexPage from "../ListingIndexPage"
+import Footer from "../Footer"
 import './splash.css'
 
 
@@ -8,12 +9,14 @@ import './splash.css'
 const splash =() => {
    
     return (
+        <>
         <div className="splash">
             <Navigation />
             <IndexSearchSection />
-            <ListingIndexPage />
-            
+            <ListingIndexPage />    
+            <Footer />
         </div>
+        </>
     )
 }
 

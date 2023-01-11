@@ -36,13 +36,6 @@ export const getListing = (listingId) => (state) => {
     return null
 }
 
-
-
-
-
-
-
-
 //thunk action creator
 
 export const fetchListings = () => async(dispatch) => {
@@ -62,13 +55,14 @@ export const fetchListing = (listingId) =>async(dispatch) => {
     }
 }
 
-export const createListing = (listing) => async(dispatch) => {
+export const createListing = (formData) => async(dispatch) => {
     const res = await csrfFetch('/api/listings',{
         method:'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(listing)
+        body:formData
+        // headers: {
+        //     'Content-Type': 'application/json'
+        // },
+        // body: JSON.stringify(listing)
     })
 
     if(res.ok){
@@ -77,13 +71,14 @@ export const createListing = (listing) => async(dispatch) => {
     }
 }
 
-export const updateListing =(listing) => async (dispatch) => {
-    const res = await csrfFetch(`/api/listings/${listing.id}`,{
+export const updateListing =(formData, listingId) => async (dispatch) => {
+    const res = await csrfFetch(`/api/listings/${listingId}`,{
         method: 'PATCH',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(listing) 
+        body: formData
+        // headers: {
+        //     'Content-Type': 'application/json'
+        // },
+        // body: JSON.stringify(listing) 
     })
 
     if(res.ok){
@@ -102,6 +97,16 @@ export const  deleteListing = (listingId) => async(dispatch) => {
     }
 }
 
+// search listings
+
+export const searchListings = (searchValue) => async(dispatch) => {
+    const res = await csrfFetch(`/api/listings/search?query=${searchValue}`)
+
+    if(res.ok){
+        const data = await res.json()
+        dispatch(setListings(data))
+    }
+}
 
 
 //reducer

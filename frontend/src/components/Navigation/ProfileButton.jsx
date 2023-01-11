@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from 'react-redux';
+import { useHistory } from "react-router-dom";
 import * as sessionActions from '../../store/session';
 
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
+  const history = useHistory()
   const [showMenu, setShowMenu] = useState(false);
   
   const openMenu = () => {
@@ -46,9 +48,9 @@ function ProfileButton({ user }) {
                 <li>Favorites</li>
                 <li>Saved Searches</li>
                 <li>Open houses schedule</li>
-                <li>Home tours</li>
+                <li onClick={() => history.push('/mygreenfin/tours')}>Home tours</li>
                 <li>Owner Dashboard</li>
-                <li>Agent</li>
+                <li onClick={() => history.push('/listings/new')}>Agent</li>
                 <li>Offers</li>
                 <li>Reviews</li>
               </div>
