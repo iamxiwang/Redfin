@@ -1,6 +1,7 @@
 import { useSelector,useDispatch } from "react-redux"
 import { useState, useEffect } from "react"
 import {createComment, updateComment, deleteComment} from '../../store/comment'
+import EditComment from "./EditCommentModal";
 
 const CommentList = ({comment}) => {
     const dispatch = useDispatch();
@@ -19,21 +20,25 @@ const CommentList = ({comment}) => {
             <div className="comment-npm">
                 <div className="commenter-info">
                     <img src={comment.profileImgUrl} alt="" />
-                    {/* <i className="fa-solid fa-circle-user"></i> */}
-                    <p>{user.username}</p>
-                    <p>{comment.createdAt}</p>
+                    <p id='username-black'>{user.username}</p>
+                    <p>{comment.createDate}</p>
                 </div>
 
                 <div
-                onClick={() => setShowDelete(true)} 
+                onClick={() => 
+                    {showDelete ? setShowDelete(false) : setShowDelete(true)}} 
                 className="three-dot">
                 <i className="fa-solid fa-ellipsis"></i>
                 </div>
                 {showDelete && 
-                    <div 
-                        className="flyout"
+                <div  className="flyout" >
+                    <button className="delete-edit-comment"
                         onClick={handleClick}
-                    >Delete Comments</div>}
+                    >Delete Comments</button>
+
+                    <EditComment comment={comment}  />
+                </div>
+                }
             </div>
         
             <div className="gray-container">

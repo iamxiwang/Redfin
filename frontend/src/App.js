@@ -5,7 +5,7 @@ import ListingShowPage from './components/ListingShowPage/index.jsx'
 import HouseForm from './components/HouseForm';
 import SearchResult from './components/Search/SearchResult.jsx'
 import TourList from './components/Appointment/TourList';
-import Footer from './components/Footer';
+
 
 
 
@@ -23,7 +23,6 @@ function App() {
           <Route path= '/listings/:listingId/edit' component={HouseForm} ></Route>
           <Route exact path ='/search' component={SearchResult}></Route>
           <Route path='/mygreenfin/tours' component={TourList}></Route>
-          <Route path='/footer' component={Footer} ></Route>
         </Switch>
     </>
   );

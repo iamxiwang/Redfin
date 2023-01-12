@@ -49,11 +49,11 @@ function Navigation() {
         </div>       
         <div className='header-right-2' >
             <h3>1-844-759-7732</h3>
-            <NavLink className='menue_item_clickable-2' exact to='/'>Buy</NavLink>
+            {/* <NavLink className='menue_item_clickable-2' exact to='/'>Buy</NavLink>
             <NavLink className='menue_item_clickable-2' exact to='/'>Rent</NavLink>
             <NavLink className='menue_item_clickable-2' exact to='/'>Sell</NavLink>
             <NavLink className='menue_item_clickable-2' exact to='/'>Morgage</NavLink>
-           
+            */}
             {sessionLinks}
         </div>
  

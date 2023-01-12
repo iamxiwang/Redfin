@@ -1,15 +1,16 @@
 import { useEffect,useState } from "react"
 import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux"
-import listingsReducer, {getListing,getListings,fetchListing} from '../../store/listings' 
+import {getListing,fetchListing} from '../../store/listings' 
 import Navigation from "../HeadBar";
 import Appointment from "../Appointment";
 import HouseForm from "../HouseForm"
 import './ListingShow.css'
-import { fetchComments, getComments } from "../../store/comment";
 import Comments from '../Comments'
 import ListingDetails from "./ListingDetails";
 import HomeFacts from "./HomeFacts";
+import Footer from "../Footer";
+import Map from '../GoogleMap'
 
 
 
@@ -37,6 +38,8 @@ const ListingShowPage = () => {
 
                     <HomeFacts listing ={listing}/>
                     {/* <HouseForm /> */}
+                    {/* <Map listing={listing} /> */}
+                    <Footer />
                 </div>
             )
 

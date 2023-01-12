@@ -13,6 +13,7 @@ const Comments = ({listingId}) =>{
     const comments = useSelector(getComments)
     const [commentValue, setCommentValue] = useState('')
     const dispatch = useDispatch()
+    // console.log(comments)
 
     useEffect( () => {
         dispatch(fetchComments(listingId))

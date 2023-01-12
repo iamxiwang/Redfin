@@ -9,5 +9,6 @@ json.extract! @listing, :id, :agent_id,
 
 json.photoUrl @listing.photos.map{|photo| photo.url}
 
+json.created_at @listing.created_at.strftime("%b %e, %Y")
 
 

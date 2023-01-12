@@ -1,0 +1,20 @@
+.rightSmallMap .map-container {
+    width:100px;
+    height:100px;
+}
+
+.aboutHomeMap .map-container {
+    width:780px;
+    height: 400px;
+}
+
+.overlayview {
+    background-color: white;
+    height:30px;
+    width: 100px;
+    text-align: center;
+}
+
+.map-container{
+    height: 500px;
+}

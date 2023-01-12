@@ -5,7 +5,7 @@ import ListingListItem from "../ListingIndexPage/ListingListItem";
 import RescheduleModal from "./RescheduleModal";
 
 
-const TourListItme = ({appointment, listings}) => {
+const TourListItem = ({appointment, listings}) => {
     const dispatch =useDispatch();
 
     const handleCancel =() => {
@@ -51,6 +51,10 @@ const TourListItme = ({appointment, listings}) => {
                 </div>
                 </div>
                 <div className="appointment-listing">
+                    <div className="appointment-message">
+                        <h2>{appointment.cancelled? 'Cancelled Appointment' : 'Waiting Agent to Confirm'}</h2>
+                        <h4>{appointment.message}</h4>
+                    </div>
                     <ListingListItem listing={listings[appointment.listingId-1]} />
                 </div>
             </div>
@@ -59,4 +63,4 @@ const TourListItme = ({appointment, listings}) => {
     )
 }
 
-export default TourListItme
+export default TourListItem

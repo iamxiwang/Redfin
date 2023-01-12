@@ -143,3 +143,7 @@ Link {
     text-decoration: none;
     display: block;
 }
+
+.header-right-2 h3{
+    margin-right: 20px;
+}
