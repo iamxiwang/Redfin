@@ -142,11 +142,58 @@
 
 .about-this-home {
     font-family: 'Libre Franklin', sans-serif;
+    width:910px;
     margin-left: 180px;
     margin-right: 180px;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
+}
+
+.aboutHomeMap{
+    margin-top: 70px;
+}
+
+.listing-description{
+    width: 800px;
+    margin-bottom: 50px;
+    margin-top: 40px;
 }
 
 
+.listing-description span{
+    /* color:#767676; */
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+.keydetails-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
 
+.keydetail{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    width: 45%;
+    font-weight: 350;
+    font-size: 1.2rem;
+}
+.column-name-gray{
+    word-break: break-word;
+    color: #767676;
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+}
 
+.text-right{
+    width: 50%;
+    padding-left: 3px;
+    word-break: break-word;
+    text-rendering: optimizeLegibility;
+}
+
+.keydetails-list {
+    margin-bottom: 60px;
+}

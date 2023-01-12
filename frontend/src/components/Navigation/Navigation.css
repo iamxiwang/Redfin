@@ -144,3 +144,7 @@ i.fa-solid.fa-user{
     font-size: 20px;
     color:darkgreen;;
 }
+
+.header-right h3{
+    margin-right: 40px;
+}

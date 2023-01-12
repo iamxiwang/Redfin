@@ -45,20 +45,20 @@ function ProfileButton({ user }) {
             <ul className="profile-dropdown">
               <div id='my-greenfin'>
                 <li id='greenfin-v1'>My Greenfin</li>
-                <li>Favorites</li>
+                {/* <li>Favorites</li>
                 <li>Saved Searches</li>
-                <li>Open houses schedule</li>
+                <li>Open houses schedule</li> */}
                 <li onClick={() => history.push('/mygreenfin/tours')}>Home tours</li>
-                <li>Owner Dashboard</li>
-                <li onClick={() => history.push('/listings/new')}>Agent</li>
-                <li>Offers</li>
-                <li>Reviews</li>
+                {/* <li>Owner Dashboard</li> */}
+                <li onClick={() => history.push('/listings/new')}>Agent Create New Listing</li>
+                {/* <li>Offers</li>
+                <li>Reviews</li> */}
               </div>
               <div id='my-setting'>
                 <li id='setting-v1'>Setting</li>
-                <li>{user.username}</li>
-                <li>Email settings</li>
-                <li>Accounting settings</li>
+                <li>Welcome! {user.username}</li>
+                {/* <li>Email settings</li>
+                <li>Accounting settings</li> */}
                 <li id='profile-dropdown-button'>
                   <button onClick={logout}>Log Out</button></li>
               </div>

@@ -9,11 +9,11 @@ const IndexSearchPage =() => {
                 <h1>Find homes first</h1>
                 <h1>Tour homes fast</h1>
                 <div className='tab'>
-                    <a href="">Buy</a>
+                    {/* <a href="">Buy</a>
                     <a href="">Rent</a>
                     <a href="">Sell</a>
                     <a href="">Morgage</a>
-                    <a href="">Home Estimate</a>
+                    <a href="">Home Estimate</a> */}
                 </div>
                 <div className="search-container">
                     <SearchBar />

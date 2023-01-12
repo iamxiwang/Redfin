@@ -56,7 +56,7 @@ l1 = Listing.create!(
         state: 'CA',
         zip: 94127,
         property_type: 'Single Family Residential',
-        list_price: 46000000,
+        list_price: 4600000,
         beds: 4,
         baths: 4,
         sqft: 3891,
@@ -129,7 +129,7 @@ l3 = Listing.create!(
             lat: 37.788621291249356, 
             lng: -122.45752618878839,
             est_mo_payment: 75308,
-            greenfin_estimate: 75308,
+            greenfin_estimate: 11730000,
             price_per_sqft: 2200
             )
 
@@ -183,7 +183,7 @@ l5 = Listing.create!(
             state: 'CA',
             zip: 94115,
             property_type: 'Singel Family Residential',
-            list_price: 11750000,
+            list_price: 1175000,
             beds: 1,
             baths: 1.5,
             sqft: 1122,
@@ -193,7 +193,7 @@ l5 = Listing.create!(
             lat: 37.787231152782304, 
             lng: -122.4301664292717,
             est_mo_payment: 10613,
-            greenfin_estimate: 1472234,
+            greenfin_estimate: 1172234,
             price_per_sqft: 1337
             )
 
@@ -246,7 +246,7 @@ l7 = Listing.create!(
             state: 'CA',
             zip: 94118,
             property_type: 'Singel Family Residential',
-            list_price: 11750000,
+            list_price: 3620876,
             beds: 4,
             baths: 3.5,
             sqft: 3106,

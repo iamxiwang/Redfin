@@ -1,7 +1,7 @@
 import HouseForm from "../HouseForm"
 import Appointment from "../Appointment";
 import { useState } from "react";
-import SearchMap from "../GoolgeMap/SearchMap";
+import SearchMap from "../GoogleMap/SearchMap";
 
 const ListingDetails = ({listing}) => {
         const[showForm, setShowForm] = useState(false)
@@ -15,7 +15,7 @@ const ListingDetails = ({listing}) => {
         const estMonthlyPayment = 'Est. '+ '$' + new Intl.NumberFormat().format(listing.estMoPayment) + '/mo'
         return (
             <div className="single-listing-container">
-            <div className="subheader">subheader</div>
+            <div className="subheader"></div>
             <div className="img-container">
                 <img id ='single-listing-img' src={listing.photoUrl[0]} alt="" />
                 <div id='img-right'>
@@ -50,7 +50,7 @@ const ListingDetails = ({listing}) => {
                             <div id='abp-string'>Sqft</div>
                         </div>
                         <div className="rightSmallMap">
-                            <SearchMap listings={[listing]} zoom={zoom} center={center} />
+                            <SearchMap listings={[listing]} zoom={zoom} centerX={center} />
                         </div>
                         
                     </div>

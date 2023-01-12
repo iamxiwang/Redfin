@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import {GoogleMap, useLoadScript, MarkerF} from '@react-google-maps/api'
+import {GoogleMap, useLoadScript, MarkerF, OverlayView} from '@react-google-maps/api'
 import './GoogleMap.css'
 
 const Map =({listing}) => {
@@ -17,11 +17,22 @@ const Map =({listing}) => {
         return (
             
             <GoogleMap
-                zoom={11}
+                zoom={13}
                 center ={{lat: 37.767257858624205, lng: -122.43880342502935}}
                 mapContainerClassName ='map-container'>
-                <MarkerF position ={center}  />
-                {/* <MarkerF position={{ lat: 40.712776, lng: -74.005974 }} /> */}
+                    <OverlayView
+                position={{lat: 37.767257858624205, lng: -122.43880342502935}}
+                mapPaneName={OverlayView.OVERLAY_MOUSE_TARGET}
+                getPixelPositionOffset={(width, height) => ({
+                    x: -(width / 2),
+                    y: -(height / 2)
+                })}
+            >
+                <div
+                    style={{ backgroundColor: "red", height: "50px", width: "50px" }}
+                >Text
+                </div>
+            </OverlayView>    
             </GoogleMap>
         )
     }

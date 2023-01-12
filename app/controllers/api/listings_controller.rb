@@ -24,7 +24,7 @@ class Api::ListingsController < ApplicationController
 
 
     def update 
-        debugger
+        # debugger
         @listing = Listing.find_by(id: params[:id])
         if @listing.update!(listing_params)
             #  && @listing.listing_agent_id === current_user.id
@@ -52,7 +52,7 @@ class Api::ListingsController < ApplicationController
             @listings = Listing.where("zip = (?)", query)
             render :index
         else
-            @listings = Listing.where("city = (?)", query)
+            @listings = Listing.where("lower(city) =(?)", query.downcase)
             render :index
         end
     end
