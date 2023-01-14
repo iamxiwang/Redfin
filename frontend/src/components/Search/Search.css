@@ -67,7 +67,8 @@ h1 {
 }
 .search-map .map-container {
     width:600px;
-    height: 800px;
+    height: 910px;
+  
     position: sticky !important;
     top: 0px;
 }
@@ -77,10 +78,16 @@ h1 {
 } */
 .search-result-page {
     display: flex;
+    /* position: relative; */
+    /* min-height:100%; */
 }
-
+.search-map{
+    position: relative; 
+    min-height:100%;
+}
 .filtered-listings {
     margin-left: 20px;
+    min-height:100%;
 }
 
 

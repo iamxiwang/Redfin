@@ -21,8 +21,9 @@ const TourListItem = ({appointment, listings}) => {
 
         dispatch(updateAppointment(newAppointment))
     }
-    // console.log([appointment.listingId])
-    // console.log(listings[1])
+    // const listing=listings[appointment.listingId-1]
+    // console.log(listing)
+
     const handleDelete =() => {
         dispatch(deleteAppointment(appointment.id))
     }
@@ -55,7 +56,8 @@ const TourListItem = ({appointment, listings}) => {
                         <h2>{appointment.cancelled? 'Cancelled Appointment' : 'Waiting Agent to Confirm'}</h2>
                         <h4>{appointment.message}</h4>
                     </div>
-                    <ListingListItem listing={listings[appointment.listingId-1]} />
+                    <ListingListItem 
+                    listing={listings[appointment.listingId-1]} />
                 </div>
             </div>
         </div>
