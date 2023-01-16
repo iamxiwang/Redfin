@@ -27,7 +27,8 @@ const EditComment =({comment}) => {
 
     return (
         <>
-            <button onClick={() => setShowModal(true)} className='delete-edit-comment'>Edit Comment</button>
+            <div onClick={() => setShowModal(true)} className='delete-edit-comment'>
+            <i className="fa-solid fa-pen-to-square"></i></div>
             {showModal && (
                 <Modal onClose={() => setShowModal(false)}>
                     

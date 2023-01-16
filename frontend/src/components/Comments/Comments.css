@@ -140,17 +140,18 @@ i.fa-solid.fa-ellipsis {
     margin-left: 14px;
 }
 
-
+.comment-edit-container{
+    display: flex;
+    justify-content: flex-end;
+}
 .delete-edit-comment {
     padding:10px;
     margin-left:10px;
-    background-color:yellowgreen;
-    border: 1px solid yellowgreen;
-    border-radius: 4px;
-    box-shadow: -0.8px 0.25px 3px 2.5px rgb(0 0 0 / 15%);
-    color:white
- 
+    border: none;
+    background-color: white;
 }
+
+
 
 .edit-comment-form{
     height:250px;

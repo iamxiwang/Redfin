@@ -23,8 +23,15 @@ const CommentList = ({comment}) => {
                     <p id='username-black'>{user.username}</p>
                     <p>{comment.createDate}</p>
                 </div>
+                <div className="comment-edit-container">
+                <div className="delete-edit-comment"
+                        onClick={handleClick}
+                    > <i className="fa-solid fa-trash-can"></i></div>
 
-                <div
+                <EditComment comment={comment}  />
+                </div>
+
+                {/* <div
                 onClick={() => 
                     {showDelete ? setShowDelete(false) : setShowDelete(true)}} 
                 className="three-dot">
@@ -38,7 +45,7 @@ const CommentList = ({comment}) => {
 
                     <EditComment comment={comment}  />
                 </div>
-                }
+                } */}
             </div>
         
             <div className="gray-container">
