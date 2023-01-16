@@ -24,6 +24,7 @@ const ListingShowPage = () => {
 
     useEffect( () =>{
             dispatch(fetchListing(listingId))  
+            window.scrollTo(0, 0);
     },[listingId,dispatch])
 
     if(listing){
