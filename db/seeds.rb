@@ -9,6 +9,7 @@ require 'open-uri'
 
 puts "Destroying tables..."
 # Unnecessary if using `rails db:seed:replant`
+Appointment.destroy_all
 Comment.destroy_all
 Listing.destroy_all
 User.destroy_all
