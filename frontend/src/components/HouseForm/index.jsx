@@ -4,9 +4,15 @@ import { useParams, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {getListing, fetchListing, createListing, updateListing} from '../../store/listings'
 import Navigation from '../HeadBar';
+import Carousel from 'react-elastic-carousel';
 import'./HouseForm.css'
 
-
+const breakPoints = [
+    {width:1, itemsToShow: 1},
+    {width:550, itemsToShow: 2},
+    {width:768, itemsToShow: 3},
+    {width:1200, itemsToShow: 4},
+];
 
 const HouseForm =() => {
     const {listingId} = useParams()
@@ -17,7 +23,6 @@ const HouseForm =() => {
     let listing = useSelector(getListing(listingId))
     const user= useSelector(state => state.session.user)
 
-    
 
     if(formType === 'Create Listing'){
         listing ={
@@ -105,36 +110,14 @@ const HouseForm =() => {
         formData.append('listing[year_built]',yearBuilt)
         formData.append('listing[zip]',zip)
 
-        // listing ={
-        //     id:listingId,
-        //     agent_id: user.id,
-        //     baths: baths,
-        //     beds: beds,
-        //     city: city,
-        //     description: description,
-        //     est_mo_payment: estMoPayment,
-        //     greenfin_estimate: greenfinEstimate,
-        //     lat: lat,
-        //     list_price: listPrice,
-        //     lng: lng,
-        //     lot: lot,
-        //     price_per_sqft: pricePerSqft,
-        //     property_type: propertyType,
-        //     sqft: sqft,
-        //     state: state,
-        //     status: status,
-        //     street_address: streetAddress,
-        //     year_built: yearBuilt,
-        //     zip: zip
-
-        // }
 
         if (photoFiles.length !== 0) {
             photoFiles.forEach(photo => {
                 formData.append('listing[photos][]', photo);  
             })
         }
-
+// promise base , .then() es5 style /
+//axios API
         if(formType === 'Create Listing'){
             return dispatch(createListing(formData))
             .then(() => history.push("/"))
@@ -200,120 +183,141 @@ const HouseForm =() => {
     }
 
     const preview = photoUrl ? photoUrl?.map(
-        (photoUrl,i) => {
-            return <div key ={i}><img className="single-image-style" src={photoUrl} alt=""  /></div> }) : null;
+        (photo,i) => {
+            return <div key ={i}><img className="single-image-style" src={photo} alt=""  /></div> }) : null;
     
 
     return (
-        <>
+
+        <div className='new-listing-page'>
+        {!user? <h1> Please log in to Modify listing</h1> : 
+        <div>
         <Navigation />
         <div className='house-form-container'>
+                <div className="image-preview">
+                    {!photoUrl?.length ? null : 
+                        <>
+                    <h1>Uploaded images</h1>
+                    
+                    <div className="photos-bucket">
+                        <Carousel breakPoints={breakPoints} pagination={false}/*enableAutoPlay autoPlaySpeed={3000}*/>
+                        {preview}
+                        </Carousel>
+                    </div>
+                    </>
+                    }
+                </div>
 
             <form className='house-form' onSubmit={handleSubmit}>
-        
-                <ul>
-                    {errors.map(error => <li key={error}>{error}</li>)}
+                <ul className="listing-form-errors" >
+                        {errors?.map(error => <li key={error}>{error}</li>)}
                 </ul>
+        
                 <h1>{formType}</h1>
-                <label >Listing Image
-                    <input 
-                        type="file" 
-                        ref={fileRef}
-                        onChange={handleFile} 
-                        multiple 
-                    />
-                </label>
 
+                <div className='form-label-input'>
+                    <div className='form-column'>
+                    <label >Listing Image
+                        <input 
+                            type="file" 
+                            ref={fileRef}
+                            onChange={handleFile} 
+                            multiple 
+                        />
+                    </label>
 
-                {/* <label >Agent Id:
-                    <input type="number" value={agentId} 
-                    onChange={(e) => setAgentId(e.target.value)} />
-                </label> */}
-                <label >Baths:
-                    <input type="number" value={baths}
-                    onChange={(e) => setBaths(e.target.value)} />
-                </label>
-                <label >Beds:
-                    <input type="number" value={beds}
-                    onChange={(e) => setBeds(e.target.value)}  />
-                </label>
-                <label >City:
-                    <input type="text" value={city}
-                    onChange={(e) => setCity(e.target.value)}  />
-                </label>
-                <label >Description:
-                    <textarea type="text" value={description}
-                    onChange={(e) => setDescription(e.target.value)}  />
-                </label>
-                <label >Estimate Monthly Payment:
-                    <input type="number" value={estMoPayment}
-                    onChange={(e) => setEstMoPayment(e.target.value)}  />
-                </label>
-                {/* <label >Garage:
-                    <input type="number" value={garage}
-                    onChange={(e) => setGarage(e.target.value)}  />
-                </label> */}
-                <label >Greenfin Estimate:
-                    <input type="number" value={greenfinEstimate}
-                    onChange={(e) => setGreenfinEstimate(e.target.value)}  />
-                </label>
-                {/* <label >Image Url:
-                    <input type="text" value={imgUrl}
-                    onChange={(e) => setImgUrl(e.target.value)}  />
-                </label> */}
-                <label >Latitute:
-                    <input type="number" value={lat}
-                    onChange={(e) => setLat(e.target.value)}  />
-                </label>
-                <label >Longitute:
-                    <input type="number" value={lng}
-                        onChange={(e) => setLng(e.target.value)}  />
-                </label>
-                <label >List Price:
-                    <input type="number" value={listPrice}
-                        onChange={(e) => setListPrice(e.target.value)}  />
-                </label>
-                <label >Lot:
-                    <input type="number" value={lot}
-                        onChange={(e) => setLot(e.target.value)}  />
-                </label>
-                <label >Price per Sq.ft:
-                    <input type="number" value={pricePerSqft}
-                        onChange={(e) => setPricePerSqft(e.target.value)}  />
-                </label>
-                <label >Property Type
-                    <input type="text" value={propertyType}
-                        onChange={(e) => setPropertyType(e.target.value)}  />
-                </label>
-                <label >Sqft:
-                    <input type="number" value={sqft}
-                        onChange={(e) => setSqft(e.target.value)}  />
-                </label>
-                <label >State:
-                    <input type="text" value={state}
-                        onChange={(e) => setState(e.target.value)}  />
-                </label>
-                <label >Status:
-                    <input type="text" value={status}
-                        onChange={(e) => setStatus(e.target.value)}  />
-                </label>
-                <label >Street Address:
-                    <input type="text" value={streetAddress}
-                        onChange={(e) => setStreetAddress(e.target.value)}  />
-                </label>
-                <label >Year Built:
-                    <input type="number" value={yearBuilt}
-                        onChange={(e) => setYearBuilt(e.target.value)}  />
-                </label>
-                <label >Zip Code
-                    <input type="number" value={zip}
-                        onChange={(e) => setZip(e.target.value)}  />
-                </label>
+                    <label >Baths:
+                        <input type="number" value={baths}
+                        onChange={(e) => setBaths(e.target.value)} />
+                    </label>
+                    <label >Beds:
+                        <input type="number" value={beds}
+                        onChange={(e) => setBeds(e.target.value)}  />
+                    </label>
+                    <label >City:
+                        <input type="text" value={city}
+                        onChange={(e) => setCity(e.target.value)}  />
+                    </label>
+                    <label >Description:
+                        <textarea type="text" value={description}
+                        onChange={(e) => setDescription(e.target.value)}  />
+                    </label>
+                    </div>
+
+                    <div className='form-column'>
+                        <label >Estimate Monthly Payment:
+                            <input type="number" value={estMoPayment}
+                            onChange={(e) => setEstMoPayment(e.target.value)}  />
+                        </label>
+                        <label >Greenfin Estimate:
+                            <input type="number" value={greenfinEstimate}
+                            onChange={(e) => setGreenfinEstimate(e.target.value)}  />
+                        </label>
+                        <label >Latitute:
+                            <input type="number" value={lat}
+                            onChange={(e) => setLat(e.target.value)}  />
+                        </label>
+                        <label >Longitute:
+                            <input type="number" value={lng}
+                                onChange={(e) => setLng(e.target.value)}  />
+                        </label>
+                        <label >List Price:
+                            <input type="number" value={listPrice}
+                                onChange={(e) => setListPrice(e.target.value)}  />
+                        </label>
+                        <label >Lot:
+                            <input type="number" value={lot}
+                                onChange={(e) => setLot(e.target.value)}  />
+                        </label>
+                        <label >Price per Sq.ft:
+                            <input type="number" value={pricePerSqft}
+                                onChange={(e) => setPricePerSqft(e.target.value)}  />
+                        </label>
+                    </div>
+
+                    <div className='form-column'>
+                        <label >Property Type
+                            <input type="text" value={propertyType}
+                                onChange={(e) => setPropertyType(e.target.value)}  />
+                        </label>
+                        <label >Sqft:
+                            <input type="number" value={sqft}
+                                onChange={(e) => setSqft(e.target.value)}  />
+                        </label>
+                        <label >State:
+                            <input type="text" value={state}
+                                onChange={(e) => setState(e.target.value)}  />
+                        </label>
+                        <label >Status:
+                            <input type="text" value={status}
+                                onChange={(e) => setStatus(e.target.value)}  />
+                        </label>
+                        <label >Street Address:
+                            <input type="text" value={streetAddress}
+                                onChange={(e) => setStreetAddress(e.target.value)}  />
+                        </label>
+                        <label >Year Built:
+                            <input type="number" value={yearBuilt}
+                                onChange={(e) => setYearBuilt(e.target.value)}  />
+                        </label>
+                        <label >Zip Code
+                            <input type="number" value={zip}
+                                onChange={(e) => setZip(e.target.value)}  />
+                        </label>
+                    </div>
+
+                </div>
+               
+
                
             <button id='houseSubmitButton'>{formType}</button>
             </form>
+       
         </div>
-        </>
+        </div>
+        }
+        </div>
+        
     )
 }
 

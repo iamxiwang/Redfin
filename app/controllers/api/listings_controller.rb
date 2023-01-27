@@ -15,7 +15,7 @@ class Api::ListingsController < ApplicationController
         # debugger
         @listing = Listing.new(listing_params)
 
-        if @listing.save!
+        if @listing.save
             render :show
         else
             render json: @listing.errors.full_messages, status: 422

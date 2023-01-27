@@ -3,14 +3,14 @@ import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux"
 import {getListing,fetchListing} from '../../store/listings' 
 import Navigation from "../HeadBar";
-import Appointment from "../Appointment";
-import HouseForm from "../HouseForm"
+// import Appointment from "../Appointment";
+// import HouseForm from "../HouseForm"
 import './ListingShow.css'
 import Comments from '../Comments'
 import ListingDetails from "./ListingDetails";
 import HomeFacts from "./HomeFacts";
 import Footer from "../Footer";
-import Map from '../GoogleMap'
+
 
 
 

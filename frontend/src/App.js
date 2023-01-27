@@ -7,8 +7,6 @@ import SearchResult from './components/Search/SearchResult.jsx'
 import TourList from './components/Appointment/TourList';
 
 
-
-
 function App() {
 
   return (

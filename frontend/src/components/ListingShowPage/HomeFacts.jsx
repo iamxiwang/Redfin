@@ -1,4 +1,3 @@
-import Map from "../GoogleMap";
 import TimeonGreenfin from "./TimeCalculator";
 import SearchMap from "../GoogleMap/SearchMap";
 
