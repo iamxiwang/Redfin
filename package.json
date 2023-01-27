@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/iamxiwang/Redfin#readme",
   "dependencies": {
-    "react-elastic-carousel": "^0.11.5"
+    "react-elastic-carousel": "^0.11.5",
+    "styled-components": "^5.3.6"
   }
 }
