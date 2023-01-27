@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/iamxiwang/Redfin/issues"
   },
-  "homepage": "https://github.com/iamxiwang/Redfin#readme"
+  "homepage": "https://github.com/iamxiwang/Redfin#readme",
+  "dependencies": {
+    "react-elastic-carousel": "^0.11.5"
+  }
 }
