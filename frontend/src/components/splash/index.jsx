@@ -1,5 +1,5 @@
 import Navigation from "../Navigation"
-import IndexSearchSection from '../Search/HomeSearch'
+import IndexSearchPage from '../Search/HomeSearch'
 import ListingIndexPage from "../ListingIndexPage"
 import Footer from "../Footer"
 import './splash.css'
@@ -12,7 +12,7 @@ const splash =() => {
         <>
         <div className="splash">
             <Navigation />
-            <IndexSearchSection />
+            <IndexSearchPage />
             <ListingIndexPage />    
             <Footer />
         </div>
