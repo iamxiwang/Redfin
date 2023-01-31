@@ -1,6 +1,5 @@
 # Greenfin
 ### [Greenfin live link](https://greenfin.onrender.com/)
-<br>
 
 ## Background
 
@@ -21,10 +20,25 @@ This project utilized Rails and postgreSQL for the backend, React/Redux and CSS3
 ## Selected Features and Development
 ### Splash Page
 
-![480splash](https://user-images.githubusercontent.com/104051053/212393835-aeba1319-cd2a-4796-a323-205027da7b13.gif)
+![Jan-30-2023 21-48-07](https://user-images.githubusercontent.com/104051053/215676668-76d711fc-45d8-46e0-84c8-1e8226ed2212.gif)
+
+<br />
 
 ### Search
 
+I created a thunk action in Redux store. When users using search bar it will hit the backend routes and send the result to frontend.
+```js
+export const searchListings = (searchValue) => async(dispatch) => {
+    const res = await csrfFetch(`/api/listings/search?query=${searchValue}`)
+
+    if(res.ok){
+        const data = await res.json()
+        dispatch(setListings(data))
+    }
+}
+
+```
+Users can search for listings using "search bar". 
 ```js
 const SearchBar = () =>{
 
@@ -58,10 +72,12 @@ const SearchBar = () =>{
     )
 }
 ```
+<br />
 
 ### Appointment
 
-   + create appointment
+   + In the listing show page, I made a appointment form for logged in user to make an appointment with agent.
+   
    ```js
    const Appointment =({listing}) => {
     const dispatch = useDispatch();
