@@ -75,6 +75,7 @@ const SearchBar = () =>{
 <br />
 
 ### Appointment
+![appointment](https://user-images.githubusercontent.com/104051053/215684753-8ad47988-7501-4094-8943-e1e93049dab5.gif)
 
    + In the listing show page, I made a appointment form for logged in user to make an appointment with agent.
    
@@ -137,6 +138,6 @@ const SearchBar = () =>{
 ### Comment 
 
 as a logged in user can create/edit/delete their own comments. Without log in user wont see the comment section
+![comments](https://user-images.githubusercontent.com/104051053/215685636-85f41280-ee6f-4bf2-9f79-288003310642.gif)
 
-![Jan-14-2023 12-50-56](https://user-images.githubusercontent.com/104051053/212496230-6e1cf572-b7cf-4cc1-ac2f-e7364509548e.gif)
 
