@@ -10,7 +10,7 @@ const SearchMap =({listings, zoom, centerX}) => {
         googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY
     })
 
-    console.log(listings)
+    // console.log(listings)
 
     const center = useMemo( () => (centerX), [centerX])
 

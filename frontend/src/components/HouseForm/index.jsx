@@ -181,7 +181,7 @@ const HouseForm =() => {
     }
 
     const handleFile = ({ currentTarget }) => {
-        console.log([...currentTarget.files])
+        // console.log([...currentTarget.files])
 
         Array.from(currentTarget.files).forEach((file)=>{
                 if (file) {
