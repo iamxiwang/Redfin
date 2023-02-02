@@ -7,7 +7,7 @@ import RescheduleModal from "./RescheduleModal";
 
 const TourListItem = ({appointment, listings}) => {
     const dispatch =useDispatch();
-
+    console.log(appointment.tourTime)
     const handleCancel =() => {
         const newAppointment = {
             id: appointment.id,

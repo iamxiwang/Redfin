@@ -1,22 +1,32 @@
 import React, { useState } from "react";
-import * as sessionActions from "../../store/session";
+import * as sessionActions from '../../store/session'
 import { useDispatch } from "react-redux";
-import "./LoginForm.css";
+import SignupFormModal from "../SignupFormModal";
+// import { Redirect } from 'react-router-dom';// Added for modal
 
-function LoginForm() {
+function RequestForm( {setShowModal, onClose }) {
   const dispatch = useDispatch();
   const [credential, setCredential] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
 
-  const handleDemo =() => {
+  const [condition, setCondition] = useState(true)
+  // console.log(setShowModal)
+//   const sessionUser = useSelector(state => state.session.user); // Added for modal
+
+//   if (sessionUser) return <Redirect to="/" />;// Added for modal
+
+  const handleDemoSubmit = (e) =>{
+    e.preventDefault();
     dispatch(sessionActions.login({ credential:'Demo-lition', password:'password' }))
+    .then(()=>setShowModal(false))
   }
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrors([]);
     return dispatch(sessionActions.login({ credential, password }))
+      .then(()=>setShowModal(false))
       .catch(async (res) => {
         let data;
         try {
@@ -25,13 +35,22 @@ function LoginForm() {
         } catch {
           data = await res.text(); // Will hit this case if the server is down
         }
-        if (data?.errors) setErrors(data.errors);
-        else if (data) setErrors([data]);
-        else setErrors([res.statusText]);
+        if (data?.errors) {
+          setErrors(data.errors)
+
+        }
+        else if (data) {
+          setErrors([data])
+
+        }
+        else {
+          setErrors([res.statusText])
+        }
       });
   };
 
   return (
+
     <div className='login'>
     <form onSubmit={handleSubmit}>
       <ul>
@@ -60,10 +79,10 @@ function LoginForm() {
       </label>
       <button className='form_button' type="submit">Log In</button>
     </form>
-      <h4 id='or'>OR</h4>
-      <button id='red-demo'  onClick={handleDemo}>Use Demo log in</button>
+      <h3 id='or'>OR</h3>
+      <button id='red-demo'  onClick={handleDemoSubmit}>Use Demo log in</button>
     </div>
   );
 }
 
-export default LoginForm;
+export default RequestForm;

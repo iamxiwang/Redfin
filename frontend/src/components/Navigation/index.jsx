@@ -20,8 +20,6 @@ function Navigation() {
   }
 
 
-
-
   let sessionLinks;
   if (sessionUser) {
     sessionLinks = (

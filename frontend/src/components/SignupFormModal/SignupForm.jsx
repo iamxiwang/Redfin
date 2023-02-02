@@ -12,7 +12,9 @@ function SignupForm() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState([]);
-
+  const handleDemo =() => {
+    dispatch(sessionActions.login({ credential:'Demo-lition', password:'password' }))
+  }
   // if (sessionUser) return <Redirect to="/" />;
   
   const handleSubmit = (e) => {
@@ -83,7 +85,8 @@ function SignupForm() {
       </label>
       <button className= 'form_button' type="submit">Sign Up</button>
     </form>
-    <p id='term-privacy'>By joining you agree to Redfin's Terms and Privacy</p>
+    <h3 id='or'>OR</h3>
+      <button id='red-demo'  onClick={handleDemo}>Use Demo log in</button>
     </div>
   );
 }
