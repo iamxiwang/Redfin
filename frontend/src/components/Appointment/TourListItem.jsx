@@ -7,7 +7,6 @@ import RescheduleModal from "./RescheduleModal";
 
 const TourListItem = ({appointment, listings}) => {
     const dispatch =useDispatch();
-    console.log(appointment.tourTime)
     const handleCancel =() => {
         const newAppointment = {
             id: appointment.id,
@@ -39,7 +38,7 @@ const TourListItem = ({appointment, listings}) => {
                         <button 
                         className="cancell-tour-btn" 
                         onClick={handleCancel}
-                        >Cancell Tour</button>
+                        >Cancel Tour</button>
 
                     <RescheduleModal 
                     appointment ={appointment} 

@@ -49,14 +49,14 @@ textarea {
 .photos-bucket{
     display: flex;
 }
-.listing-form-errors li{
+.listing-form-errors{
     text-transform: none;
-    font-family: "Open Sans", "Adjusted Arial", Tahoma, Geneva, sans-serif;
-    font-weight: 400;
-    font-size: 12px;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 1000;
+    font-size: 15px;
     line-height: 16px;
-    color: rgb(163, 0, 11);
-    margin: 8px;
+    color:red;
+    margin: 15px;
 }
 .form-label-input{
     display: flex;

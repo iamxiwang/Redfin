@@ -18,9 +18,19 @@ const Appointment =({listing}) => {
     const user = useSelector((state) => (state.session.user))
     const [showModal, setShowModal] = useState(false)
     const [errors, setErrors] = useState([]);
+    const [submit, setSubmit] = useState(false)
 
-    const handleSubmit =(e) => {
+
+    // useEffect( () => {
+    //     if(errors.length === 0 && submit){
+    //         history.push('/mygreenfin/tours')
+    //     }
+    //     setSubmit(false)
+    // }, [errors,submit])
+
+    const handleSubmit = async (e) => {
         e.preventDefault()
+        setSubmit(true)
         setErrors([]);
         if(!user){
             setShowModal(true)
@@ -34,8 +44,8 @@ const Appointment =({listing}) => {
             cancelled: false
             
         }
-        console.log(tourTime)
-        dispatch(createAppointment(appointment))
+        let err = []
+        await dispatch(createAppointment(appointment))
             .catch(async (res) => {
                 let data;
                 try {
@@ -44,12 +54,27 @@ const Appointment =({listing}) => {
                 } catch {
                 data = await res.text(); // Will hit this case if the server is down
                 }
-                if (data?.errors) setErrors(data.errors);
-                else if (data) setErrors([data]);
-                else setErrors([res.statusText]);
-            });
+                if (data?.errors) {
+                    setErrors(data.errors);
+                    err = data.errors
+                    console.log(data)
+                }
+                else if(data) {
+                        setErrors([data])
+                        err = data.errors
+                        console.log(data)
+                }
+                else {
+                    setErrors([res.statusText])
+                    err = data.errors
+                    console.log(data)
+                };
+            })
         setTourTime('')
         setMessage('')
+        if(err.length === 0){
+            history.push('/mygreenfin/tours')
+        }
     }
     }
 

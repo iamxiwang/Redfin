@@ -50,11 +50,11 @@ const SearchResult =() => {
                 <h1>{searchValue} Homes for sale</h1>    
 
                 <div className="custom-filter-label">
-                    {/* <button id='v3'>For sale</button>
+                    <button id='v3'>For sale</button>
                     <button>Price</button>
                     <button>Home type</button>
                     <button>Beds/Baths</button>
-                    <button>All filters</button> */}
+                    <button>All filters</button>
                 </div >
                 <div className='row-flex'>
                 <ListingList listings={listings} />

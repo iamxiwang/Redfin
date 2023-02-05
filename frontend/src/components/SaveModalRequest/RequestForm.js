@@ -56,9 +56,8 @@ function RequestForm( {setShowModal, onClose }) {
       <ul>
         {errors.map(error => <li key={error}>{error}</li>)}
       </ul>
-      <h1>Hi, Welcome Back!</h1>
-      <br />
-      <br />
+      <h2 id='alert'>Sign In to Schedule a Tour</h2>
+    
       <label>
         Username or Email
         <input
@@ -77,7 +76,7 @@ function RequestForm( {setShowModal, onClose }) {
           required
         />
       </label>
-      <button className='form_button' type="submit">Log In</button>
+      <button className='form_button' type="submit">Sign In</button>
     </form>
       <h3 id='or'>OR</h3>
       <button id='red-demo'  onClick={handleDemoSubmit}>Use Demo log in</button>
