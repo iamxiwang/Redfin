@@ -1,7 +1,7 @@
 import HouseForm from "../HouseForm"
 import Appointment from "../Appointment";
 import { useState } from "react";
-import SearchMap from "../GoogleMap/SearchMap";
+import ShowMap from "../GoogleMap/ShowMap";
 
 const ListingDetails = ({listing}) => {
         const[showForm, setShowForm] = useState(false)
@@ -50,7 +50,7 @@ const ListingDetails = ({listing}) => {
                             <div id='abp-string'>Sqft</div>
                         </div>
                         <div className="rightSmallMap">
-                            <SearchMap listings={[listing]} zoom={zoom} centerX={center} />
+                            <ShowMap listings={[listing]} zoom={zoom} centerX={center} />
                         </div>
                         
                     </div>

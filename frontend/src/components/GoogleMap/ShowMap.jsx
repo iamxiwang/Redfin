@@ -1,12 +1,12 @@
 import {useState, useMemo } from 'react'
-import {GoogleMap, useLoadScript, MarkerF,OverlayView} from '@react-google-maps/api'
+import {GoogleMap, useLoadScript, Marker,OverlayView} from '@react-google-maps/api'
 import { useHistory } from "react-router-dom";
-import abbrNum from './abbreviateNum';
+
 import './GoogleMap.css'
 
 
 //get mutiple props to react component
-const SearchMap =({listings, zoom, centerX}) => {
+const ShowMap =({listings, zoom, centerX}) => {
     const history = useHistory();
     const {isLoaded} = useLoadScript({
         googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY
@@ -27,23 +27,14 @@ const SearchMap =({listings, zoom, centerX}) => {
 
                 {listings.map (
                     (listing,i) => 
-                (<OverlayView key={i} position ={{lat:listing.lat,lng: listing.lng}}    
-                    mapPaneName={OverlayView.OVERLAY_MOUSE_TARGET}>
-                    <div className='price' 
-                    onClick={() => (history.push(`/listings/${listing.id}`))}>
-                        <p>{'$'+ abbrNum((listing.listPrice),1)}</p>
-                    </div>
-                
-                </OverlayView>))}
-                
-                {/* (<MarkerF 
+
+                (<Marker 
                     position ={{lat:listing.lat,lng: listing.lng}} 
                     key={i}
                     color='green'
                     // animation={google.maps.Animation.BOUNCE}
                     />)
                 )}
-                 */}
                 </GoogleMap>
             
         )
@@ -53,4 +44,4 @@ const SearchMap =({listings, zoom, centerX}) => {
 
 
 
-export default SearchMap
+export default ShowMap

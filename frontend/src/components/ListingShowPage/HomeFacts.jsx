@@ -1,5 +1,5 @@
 import TimeonGreenfin from "./TimeCalculator";
-import SearchMap from "../GoogleMap/SearchMap";
+import ShowMap from "../GoogleMap/ShowMap";
 
 
 const HomeFacts = ({listing}) => {
@@ -65,7 +65,7 @@ const HomeFacts = ({listing}) => {
                 
                 <div className='aboutHomeMap'>
                 {/* <Map listing ={listing} /> */}
-                <SearchMap listings={[listing]} zoom={zoom} centerX={center}/>
+                <ShowMap listings={[listing]} zoom={zoom} centerX={center}/>
                 </div>
 
             </div>

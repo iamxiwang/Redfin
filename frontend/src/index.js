@@ -25,7 +25,7 @@ const root = createRoot(document.getElementById("root"));
 
 const renderApplication = () => {
   return root.render(
-    <React.StrictMode>
+    // <React.StrictMode>
         <ModalProvider>
           <Provider store={store}>
             <BrowserRouter>
@@ -33,7 +33,7 @@ const renderApplication = () => {
             </BrowserRouter>
           </Provider>
     </ModalProvider>
-    </React.StrictMode>,
+    // </React.StrictMode>,
   );
 }
 
