@@ -80,7 +80,7 @@ export const createAppointment =(appointment) => async(dispatch) => {
 
 
 export const updateAppointment = (appointment) => async(dispatch) => {
-    const res = await csrfFetch(` /api/appointments/${appointment.id}`, {
+    const res = await csrfFetch(`/api/appointments/${appointment.id}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json'

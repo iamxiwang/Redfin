@@ -14,9 +14,9 @@ const TourList =() => {
     const appointments = useSelector(getAppointments)
     const listings = useSelector(getListings)
 
-    useEffect( () =>{
-        dispatch(fetchListings())
-    },[])
+    // useEffect( () =>{
+    //     dispatch(fetchListings())
+    // },[])
 
 
     useEffect( () =>{
