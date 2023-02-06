@@ -18,3 +18,17 @@
 .map-container{
     height: 500px;
 }
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:25px;
+    width:70px;
+    background-color:red;
+    border-radius: 30px;
+    border: 2px solid #fff;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+
+}
