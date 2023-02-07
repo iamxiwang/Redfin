@@ -14,7 +14,7 @@
   
 }
 
-input[type=text], input[type=password], input[type=datetime-local],input[type=datetime],input[type=number],input[type=file],textarea {
+input[type=text], input[type=password], input[type=datetime-local],input[type=datetime],input[type=number],input[type=file],textarea,select {
   width: 100%;
   padding: 12px;
   border: 2px solid #ccc;
@@ -23,6 +23,8 @@ input[type=text], input[type=password], input[type=datetime-local],input[type=da
   margin-top: 8px;
   margin-bottom: 28px;
   resize: vertical;
+  background-color: #f6f6fa;
+  letter-spacing: 0.1rem;
 }
 
 #term-privacy {
@@ -71,4 +73,8 @@ button#red-demo {
   text-align: center;
   margin-bottom: 30px;
 
+}
+.login-errors{
+  color:red;
+  font-weight: 1000;
 }

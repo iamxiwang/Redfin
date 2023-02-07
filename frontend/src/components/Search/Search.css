@@ -45,13 +45,20 @@ a {
     padding-bottom: 150px;
 
 }
+.abc{
+    height: 100vh;
+}
 .nodatafind{
+    margin-top: 0;
+    height: calc(100% - 200px);
     background-color: rgb(242, 242, 242);
     font-size: xxx-large;
     color: #696969;
     text-align: center;
-    padding:146px;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 i.fa-solid .fa-face-sad-cry{
@@ -67,7 +74,7 @@ h1 {
 }
 .search-map .map-container {
     width:600px;
-    height: 910px;
+    height: 100vh;
   
     position: sticky !important;
     top: 0px;
@@ -88,6 +95,7 @@ h1 {
 .filtered-listings {
     margin-left: 20px;
     min-height:100%;
+    margin-top: 70px;
 }
 
 
@@ -95,6 +103,9 @@ h1 {
     margin-top: 20px;
     margin-left: 10px;
     margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: xx-large;
 }
 
 .custom-filter-label {

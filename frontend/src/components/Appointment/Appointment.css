@@ -24,19 +24,21 @@
 .mygreenfin-tour-container{
     background-color: rgb(247, 244, 244);
     min-height: 600px;
+    padding-top: 100px;
 }
 
 .mygreenfin-tour-container header {
+    font-family: 'Roboto', sans-serif;
     max-width: 1260px;
     width: 82%;
-    margin-left: auto!important;
+    margin-left: 135px;
     margin-right: auto!important;
     padding-left: 0;
     padding-right: 0;
     box-sizing: border-box;
     display: block;
     zoom: 1;
-    font-size: 2.25rem;
+    font-size: 2rem;
     font-weight: 600;
     line-height: 1.25;
     padding: 14px 0;
@@ -143,4 +145,10 @@
 .errors{
     color:red;
     font-weight: 600;
+}
+.tour-list{
+    margin-bottom: 50px;
+}
+.tour-list header{
+   
 }

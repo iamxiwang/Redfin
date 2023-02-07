@@ -22,13 +22,35 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height:25px;
-    width:70px;
-    background-color:red;
+    height:31px;
+    width:90px;
+    background-color:white;
     border-radius: 30px;
     border: 2px solid #fff;
-    color: #fff;
     font-weight: 700;
-    font-size: 13px;
+    font-size: 15px;
+    box-shadow: rgb(255 255 255 / 8%) 0px 0px 0px 1px inset, rgb(0 0 0 / 58%) 0px 2px 4px;
 
+}
+.price:hover{
+height: 45px;
+width: 100px;
+}
+
+#thumnail-img {
+    width: 200px;
+    height: 120px;
+}
+.thumnail{
+    background-color: #fff;
+    width:200px;
+    height: 200px;
+    margin:5px;
+    box-shadow: rgb(255 255 255 / 8%) 0px 0px 0px 1px inset, rgb(0 0 0 / 58%) 0px 2px 4px;
+    border-radius: 30px;
+    border-width: 1px;
+    border-color: #f5f5f5;
+    overflow: hidden;
+  
+    background: #fff;
 }

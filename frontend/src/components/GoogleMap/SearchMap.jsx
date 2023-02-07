@@ -8,10 +8,41 @@ import './GoogleMap.css'
 //get mutiple props to react component
 const SearchMap =({listings, zoom, centerX}) => {
     const history = useHistory();
+   
     const {isLoaded} = useLoadScript({
         googleMapsApiKey: process.env.REACT_APP_MAPS_API_KEY
     })
 
+    const ThumnailListing = ({listing}) => {
+        const price = '$' + new Intl.NumberFormat().format(listing.listPrice)
+        const bds = listing.beds.toString()+'beds' + ' ' +listing.baths.toString() +'baths' + ' '+new Intl.NumberFormat().format(listing.sqft) +'sqft'
+        return (
+        <div className='thumnail' onClick={() => (history.push(`/listings/${listing.id}`))}>
+            <img id='thumnail-img'src={listing.photoUrl[0]} />
+            <div className="details">
+                <h3 id='dollor'>{price}</h3>
+                <div id='sqft'>
+                    <p id='bedbath'>{listing.beds.toString()+' '+'beds'}</p>
+                    <p id='bedbath'>{listing.baths.toString()+' '+'baths'}</p>
+                    <p id='bedbath'>{new Intl.NumberFormat().format(listing.sqft) +' '+'Sq.ft'}</p>
+                </div>
+            </div>
+        </div>)
+    }
+    const PriceTab =({listing}) => {
+        const [showWindow, setShowWindow] = useState(false)
+        return (
+            <>
+            <div className='price' 
+                onClick={() => (showWindow? setShowWindow(false) : setShowWindow(true))}>
+                    <p>{'$ '+ abbrNum((listing.listPrice),1)}</p>
+            </div>
+            {showWindow &&
+            <ThumnailListing listing={listing} />
+            }
+            </>
+        )
+    }
     const center = useMemo( () => (centerX), [centerX])
 
     if(!isLoaded){
@@ -29,11 +60,8 @@ const SearchMap =({listings, zoom, centerX}) => {
                     (listing,i) => 
                 (<OverlayView key={i} position ={{lat:listing.lat,lng: listing.lng}}    
                     mapPaneName={OverlayView.OVERLAY_MOUSE_TARGET}>
-                    <div className='price' 
-                    onClick={() => (history.push(`/listings/${listing.id}`))}>
-                        <p>{'$'+ abbrNum((listing.listPrice),1)}</p>
-                    </div>
-                
+                    
+                <PriceTab listing={listing} />
                 </OverlayView>))}
                 
                 {/* (<MarkerF 

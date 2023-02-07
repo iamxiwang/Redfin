@@ -29,7 +29,7 @@ const TourListItem = ({appointment, listings}) => {
 
 
     return (
-        <div>
+        <div className="tour-list">
             <header>{appointment.cancelled? "Cancelled Tours" : 'Upcoming Tour'}</header>
             <div className="appointment-item"  >
                 <div className="appointment-info">

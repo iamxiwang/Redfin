@@ -24,14 +24,14 @@ const SearchResult =() => {
 
     if(Object.keys(listings).length === 0){
         return (
-            <>
+            <div className="abc">
             <Navigation />
             <div className="nodatafind"> 
             <i className="fa-solid fa-face-sad-cry"></i>
             <h2>Sorry, we coudn't find any data</h2>
             </div>
             <Footer />
-            </>
+            </div>
         )
     }else{
 
@@ -47,15 +47,15 @@ const SearchResult =() => {
             </div>
 
             <div className="filtered-listings">
-                <h1>{searchValue} Homes for sale</h1>    
+                <h1>Search Result for "{searchValue}" </h1>    
 
-                <div className="custom-filter-label">
+                {/* <div className="custom-filter-label">
                     <button id='v3'>For sale</button>
                     <button>Price</button>
                     <button>Home type</button>
                     <button>Beds/Baths</button>
                     <button>All filters</button>
-                </div >
+                </div > */}
                 <div className='row-flex'>
                 <ListingList listings={listings} />
                 </div>
