@@ -27,6 +27,9 @@ This project utilized Rails and postgreSQL for the backend, React/Redux and CSS3
 ### Search
 
 I created a thunk action in Redux store. When users using search bar it will hit the backend routes and send the result to frontend.
+
+![search](https://user-images.githubusercontent.com/104051053/217348015-01de7893-86e2-4146-a00a-4d3799dc177e.gif)
+
 ```js
 export const searchListings = (searchValue) => async(dispatch) => {
     const res = await csrfFetch(`/api/listings/search?query=${searchValue}`)
@@ -39,6 +42,8 @@ export const searchListings = (searchValue) => async(dispatch) => {
 
 ```
 Users can search for listings using "search bar". 
+
+
 ```js
 const SearchBar = () =>{
 
