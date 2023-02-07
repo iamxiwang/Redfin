@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {getListing, fetchListing, createListing, updateListing} from '../../store/listings'
 import Navigation from '../HeadBar';
 import Carousel from 'react-multi-carousel';
+import Footer from "../Footer"
 import 'react-multi-carousel/lib/styles.css';
 import'./HouseForm.css'
 
@@ -204,9 +205,14 @@ const HouseForm =() => {
     return (
 
         <div className='new-listing-page'>
-        {!user? <h1> Please log in to Modify listing</h1> : 
-        <div>
         <Navigation />
+        {!user? 
+        (<div className='no-user'>
+
+        <h1>Please log in to Modify listing</h1>
+        </div>) : 
+        <div>
+       
         <div className='house-form-container'>
                 <div className="image-preview">
                     {!photoUrl?.length ? null : 
@@ -225,11 +231,11 @@ const HouseForm =() => {
                         {errors?.map(error => <li key={error}>{error}</li>)}
                 </ul>
         
-                <h1>{formType}</h1>
+                <h1 className='form-head'>{formType}</h1>
 
                 <div className='form-label-input'>
                     <div className='form-column'>
-                    <label >Listing Image
+                    <label >Listing Image:
                         <input 
                             type="file" 
                             ref={fileRef}
@@ -240,94 +246,104 @@ const HouseForm =() => {
 
                     <label >Baths:
                         <input type="number" value={baths}
-                        onChange={(e) => setBaths(e.target.value)} />
+                        onChange={(e) => setBaths(e.target.value)} placeholder={'Bath'} />
                     </label>
                     <label >Beds:
                         <input type="number" value={beds}
-                        onChange={(e) => setBeds(e.target.value)}  />
+                        onChange={(e) => setBeds(e.target.value)}   placeholder={'Beds'}/>
                     </label>
                     <label >City:
                         <input type="text" value={city}
-                        onChange={(e) => setCity(e.target.value)}  />
+                        onChange={(e) => setCity(e.target.value)} placeholder={'City'} />
                     </label>
                     <label >Description:
                         <textarea type="text" value={description}
-                        onChange={(e) => setDescription(e.target.value)}  />
+                        onChange={(e) => setDescription(e.target.value)}  placeholder={'About this home ...'} />
                     </label>
+                    <button id='houseSubmitButton'>{formType}</button>
                     </div>
 
                     <div className='form-column'>
                         <label >Estimate Monthly Payment:
                             <input type="number" value={estMoPayment}
-                            onChange={(e) => setEstMoPayment(e.target.value)}  />
+                            onChange={(e) => setEstMoPayment(e.target.value)}  placeholder={'Estimate Monthly Payment'} />
                         </label>
                         <label >Greenfin Estimate:
                             <input type="number" value={greenfinEstimate}
-                            onChange={(e) => setGreenfinEstimate(e.target.value)}  />
+                            onChange={(e) => setGreenfinEstimate(e.target.value)}  placeholder={'Greenfin Estimate'} />
                         </label>
                         <label >Latitute:
                             <input type="number" value={lat}
-                            onChange={(e) => setLat(e.target.value)}  />
+                            onChange={(e) => setLat(e.target.value)}  placeholder={'Lat'} />
                         </label>
                         <label >Longitute:
                             <input type="number" value={lng}
-                                onChange={(e) => setLng(e.target.value)}  />
+                                onChange={(e) => setLng(e.target.value)} placeholder={'Lng'}  />
                         </label>
                         <label >List Price:
                             <input type="number" value={listPrice}
-                                onChange={(e) => setListPrice(e.target.value)}  />
+                                onChange={(e) => setListPrice(e.target.value)} placeholder={'List Price'}  />
                         </label>
                         <label >Lot:
                             <input type="number" value={lot}
-                                onChange={(e) => setLot(e.target.value)}  />
+                                onChange={(e) => setLot(e.target.value)} placeholder={'Lot'} />
                         </label>
                         <label >Price per Sq.ft:
                             <input type="number" value={pricePerSqft}
-                                onChange={(e) => setPricePerSqft(e.target.value)}  />
+                                onChange={(e) => setPricePerSqft(e.target.value)} placeholder={'Price/sqft'} />
                         </label>
                     </div>
 
                     <div className='form-column'>
-                        <label >Property Type
-                            <input type="text" value={propertyType}
-                                onChange={(e) => setPropertyType(e.target.value)}  />
+                        <label >Property Type:
+                            <select required name='propertyType'
+                                value={propertyType}
+                                onChange={(e) => setPropertyType(e.target.value)} 
+                            > 
+                                <option value="" disabled>Select Property Type ...</option>
+                                <option key={'Single House'}>Single House</option>
+                                <option key={'Condo'}>Condo</option> 
+                            </select>
                         </label>
                         <label >Sqft:
                             <input type="number" value={sqft}
-                                onChange={(e) => setSqft(e.target.value)}  />
+                                onChange={(e) => setSqft(e.target.value)} placeholder={'Sqft'}  />
                         </label>
                         <label >State:
                             <input type="text" value={state}
-                                onChange={(e) => setState(e.target.value)}  />
+                                onChange={(e) => setState(e.target.value)} placeholder={'State'} />
                         </label>
                         <label >Status:
-                            <input type="text" value={status}
-                                onChange={(e) => setStatus(e.target.value)}  />
+                            <select required value={status}
+                                onChange={(e) => setStatus(e.target.value)}
+                            > 
+                            <option value="" disabled>Select Status ...</option>
+                            <option key={'Open House'}>Open House</option>
+                            <option key={'CONTINGENT'}>CONTINGENT</option>
+                            </select>
                         </label>
                         <label >Street Address:
                             <input type="text" value={streetAddress}
-                                onChange={(e) => setStreetAddress(e.target.value)}  />
+                                onChange={(e) => setStreetAddress(e.target.value)} placeholder={'Street Address'} />
                         </label>
                         <label >Year Built:
                             <input type="number" value={yearBuilt}
-                                onChange={(e) => setYearBuilt(e.target.value)}  />
+                                onChange={(e) => setYearBuilt(e.target.value)} placeholder={'Year built'} />
                         </label>
-                        <label >Zip Code
+                        <label >ZIP Code:
                             <input type="number" value={zip}
-                                onChange={(e) => setZip(e.target.value)}  />
+                                onChange={(e) => setZip(e.target.value)}  placeholder={'ZIP code'}/>
                         </label>
                     </div>
 
                 </div>
                
-
-               
-            <button id='houseSubmitButton'>{formType}</button>
             </form>
-       
+
         </div>
         </div>
         }
+        <Footer />
         </div>
         
     )

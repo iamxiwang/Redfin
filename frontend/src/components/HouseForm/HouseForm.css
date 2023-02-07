@@ -1,34 +1,44 @@
 .new-listing-page{
     height: 100vh;
     width: 100vw;
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .house-form-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 100px;
 
 }
 .house-form h1 {
     margin-left: 40px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
 }
 
 form.house-form {
-    width: 80vw;
-    padding: 40px ;
+    width: 65vw;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 textarea {
     height:160px;
 }
 
 #houseSubmitButton {
-    width: 74vw;
-    margin-left: 40px;
-    margin-right: 40px;
+    width: 333px;
+    /* margin-left: 20px;
+    margin-right: 20px; */
     height: 40px;
     color:white;
-    font-size: 25px;
+    font-size: 23px;
     background-color:#065535;
     border-radius: 4px;
 }
@@ -60,8 +70,18 @@ textarea {
 }
 .form-label-input{
     display: flex;
+    justify-content: center;
+    width:65vw;
+    
 }
 .form-column{
-    margin:40px;
+    margin:20px;
     width:333px
+}
+.no-user{
+    height: calc(100% - 273px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.2rem;
 }

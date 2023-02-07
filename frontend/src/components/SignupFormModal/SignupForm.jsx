@@ -43,7 +43,7 @@ function SignupForm() {
     <form onSubmit={handleSubmit}>
      
       <ul>
-        {errors.map(error => <li key={error}>{error}</li>)}
+        {errors.map(error => <li className='login-errors' key={error}>{error}</li>)}
       </ul>
       <h1>Join GreenFin</h1>
       <br />
