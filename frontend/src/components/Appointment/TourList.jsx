@@ -18,8 +18,9 @@ const TourList =() => {
 
 
     useEffect( () =>{
-        dispatch(fetchAppointments(user.id))
         dispatch(fetchListings())
+        dispatch(fetchAppointments(user.id))
+        window.scrollTo(0, 9999);
     },[])
 
 
