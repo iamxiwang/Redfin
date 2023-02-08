@@ -56,7 +56,9 @@ const TourListItem = ({appointment, listings}) => {
                         <h4>{appointment.message}</h4>
                     </div>
                     <ListingListItem 
-                    listing={listings[appointment.listingId-1]} />
+                    // listing={listings[appointment.listingId-1]} 
+                    listing={listings.find((listing) => appointment.listingId === listing.id)}
+                    />
                 </div>
             </div>
         </div>
