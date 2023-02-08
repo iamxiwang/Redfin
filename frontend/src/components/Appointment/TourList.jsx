@@ -14,17 +14,19 @@ const TourList =() => {
     const appointments = useSelector(getAppointments)
     const listings = useSelector(getListings)
 
-    // console.log(listings)
+    console.log(listings)
 
 
     useEffect( () =>{
         dispatch(fetchListings())
+        if(user){
         dispatch(fetchAppointments(user.id))
+        }
         window.scrollTo(0, 9999);
-    },[])
+    },[dispatch,user])
 
 
-    if(listings.length !== 0 ){
+    if(listings.length !== 0 && user ){
         return (
                 <>
                 <Navigation />
@@ -35,6 +37,25 @@ const TourList =() => {
                 </div>
                 </>
             )
+    }else if(listings.length === 0){
+        return(
+            <>
+            <Navigation />
+            <div>
+                <h1>Loading...</h1>
+            </div>
+            </> 
+        )
+    }else if(!user){
+            return (
+                <div className='new-listing-page'>
+                    <Navigation />
+                    <div className='no-user'>
+                    <h1>Please log in to See Tour list</h1>
+                    </div> 
+                </div>
+            )
+    
     }
 }
 
