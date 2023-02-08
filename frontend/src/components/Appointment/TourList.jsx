@@ -14,7 +14,7 @@ const TourList =() => {
     const appointments = useSelector(getAppointments)
     const listings = useSelector(getListings)
 
-    console.log(listings)
+    // console.log(listings)
 
 
     useEffect( () =>{

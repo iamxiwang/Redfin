@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 
 const ListingListItem = ({listing}) => {
     const history = useHistory();
-    console.log(listing)
+    // console.log(listing)
     const handleClick =() => {
         history.push(`/listings/${listing.id}`)
     }
