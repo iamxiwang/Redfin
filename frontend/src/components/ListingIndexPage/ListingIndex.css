@@ -4,9 +4,10 @@
 .userfeed {
     display: flex;
     flex-direction: column;
-    justify-content: flex-star;
+    justify-content: flex-start;
     /* align-items: center; */
     margin: 80px;
+    width:100vw
    
 }
 
