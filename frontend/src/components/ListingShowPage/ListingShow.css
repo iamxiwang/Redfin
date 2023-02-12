@@ -7,7 +7,22 @@
     /* margin-right:180px */
     /* width:1310px */
 }
+@media screen and (width: 1728px){
+    .media{
+        margin-left: 14vw;
+    }
+}
 
+@media screen and (width: 1512px){
+    .media{
+        margin-left: 3vw;
+    }
+}
+@media screen and (width:1920px){
+    .media{
+        margin-left: 10vw;
+    }
+}
 .subheader{
     display: flex;
     justify-content: flex-start;
