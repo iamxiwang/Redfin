@@ -14,6 +14,7 @@ const ListingDetails = ({listing}) => {
         const sqftValue = new Intl.NumberFormat().format(listing.sqft)
         const estMonthlyPayment = 'Est. '+ '$' + new Intl.NumberFormat().format(listing.estMoPayment) + '/mo'
         return (
+           
             <div className="single-listing-container">
             <div className="subheader"></div>
             <div className="img-container">

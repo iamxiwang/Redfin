@@ -16,6 +16,13 @@
 
     }
 }
+@media screen and (width: 1512px){
+    .userfeed {
+        margin-left: 7vw;
+       
+
+    }
+}
 @media screen and (width:1920px){
     .userfeed {
         margin-left:120px

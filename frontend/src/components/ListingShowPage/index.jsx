@@ -32,12 +32,14 @@ const ListingShowPage = () => {
             return (
                 <div >
                     <Navigation />
+                    <div className='media'>
                     <ListingDetails listing= {listing} />
                     {user &&
                     <Comments listingId = {listingId}/>
                     }
 
                     <HomeFacts listing ={listing}/>
+                    </div>
                     {/* <HouseForm /> */}
                     {/* <Map listing={listing} /> */}
                     <Footer />
