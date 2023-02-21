@@ -158,7 +158,7 @@
 
 .about-this-home {
     font-family: 'Libre Franklin', sans-serif;
-    width:910px;
+    width:800px;
     /* margin-left: 13vw;
     margin-right: 180px; */
     margin-bottom: 100px;
@@ -169,7 +169,7 @@
 }
 
 .listing-description{
-    width: 760px;
+    width: 750px;
     margin-bottom: 50px;
     margin-top: 40px;
 }
