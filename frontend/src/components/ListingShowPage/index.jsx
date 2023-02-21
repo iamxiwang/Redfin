@@ -3,12 +3,8 @@ import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux"
 import {getListing,fetchListing} from '../../store/listings' 
 import Navigation from "../HeadBar";
-// import Appointment from "../Appointment";
-// import HouseForm from "../HouseForm"
 import './ListingShow.css'
-import Comments from '../Comments'
 import ListingDetails from "./ListingDetails";
-import HomeFacts from "./HomeFacts";
 import Footer from "../Footer";
 
 
@@ -34,11 +30,8 @@ const ListingShowPage = () => {
                     <Navigation />
                     <div className='media'>
                     <ListingDetails listing= {listing} />
-                    {user &&
-                    <Comments listingId = {listingId}/>
-                    }
-
-                    <HomeFacts listing ={listing}/>
+                    
+                    {/* <HomeFacts listing ={listing}/> */}
                     </div>
                     {/* <HouseForm /> */}
                     {/* <Map listing={listing} /> */}

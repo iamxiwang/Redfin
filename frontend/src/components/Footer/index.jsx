@@ -9,7 +9,7 @@ const Footer = () => {
             <Link to={{pathname: 'https://github.com/iamxiwang'}} className='github-tag' target="_blank" >
             <i className="fa-brands fa-github"></i>
             </Link>
-            <Link to={{pathname: 'https://www.linkedin.com/in/xi-wang-7b00bb25a/'}} className='github-tag' target="_blank" >
+            <Link to={{pathname: 'https://www.linkedin.com/in/xi-vivian-wang-7b00bb25a/'}} className='github-tag' target="_blank" >
             <i className="fa-brands fa-linkedin"></i>
             </Link>
             </div>
