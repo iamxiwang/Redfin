@@ -34,11 +34,8 @@ const ListingShowPage = () => {
                     <Navigation />
                     <div className='media'>
                     <ListingDetails listing= {listing} />
-                    {user &&
-                    <Comments listingId = {listingId}/>
-                    }
-
-                    <HomeFacts listing ={listing}/>
+                    
+                    {/* <HomeFacts listing ={listing}/> */}
                     </div>
                     {/* <HouseForm /> */}
                     {/* <Map listing={listing} /> */}

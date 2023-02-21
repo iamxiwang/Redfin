@@ -1,9 +1,13 @@
 import HouseForm from "../HouseForm"
+import { useDispatch, useSelector } from "react-redux"
 import Appointment from "../Appointment";
 import { useState } from "react";
 import ShowMap from "../GoogleMap/ShowMap";
+import HomeFacts from'./HomeFacts'
+import Comments from '../Comments'
 
 const ListingDetails = ({listing}) => {
+        const user = useSelector( state => state.session.user)
         const[showForm, setShowForm] = useState(false)
         const zoom = 10;
         const center = {lat: listing.lat, lng:listing.lng}
@@ -55,8 +59,12 @@ const ListingDetails = ({listing}) => {
                         </div>
                         
                     </div>
-                    <Appointment listing={listing}/>
+                    {/* <Appointment listing={listing}/> */}
                 </div>
+                {user &&
+                    <Comments listingId = {listing.id}/>
+                }
+                <HomeFacts listing ={listing}/>
         </div>
         {/* <button id='trigger'  
         onClick={() => ( showForm ? setShowForm(false) : setShowForm(true))}>Update Listing</button>

@@ -91,7 +91,7 @@
 .middle-meat{
     display: flex;
     align-items: center;
-    width:1070px;
+    /* width:1070px; */
     height: 80px;
     padding-bottom: 40px;
     border-bottom: 2px solid #e2e2e2;
@@ -160,8 +160,8 @@
 .about-this-home {
     font-family: 'Libre Franklin', sans-serif;
     width:910px;
-    margin-left: 13vw;
-    margin-right: 180px;
+    /* margin-left: 13vw;
+    margin-right: 180px; */
     margin-bottom: 100px;
 }
 
@@ -213,4 +213,10 @@
 
 .keydetails-list {
     margin-bottom: 60px;
+}
+.listing-main-stats {
+    vertical-align: top;
+    width: 728px;
+    display: inline-block;
+    border-bottom: 1px solid #e2e2e2;
 }
