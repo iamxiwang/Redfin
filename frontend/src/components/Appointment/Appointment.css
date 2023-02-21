@@ -1,15 +1,18 @@
 .appointment-container {
     font-family: 'Libre Franklin', sans-serif;
-    display: flex;
-    justify-content: flex-start;
-    margin-top: -50px;
+    display: inline-block;
     background-color: #f5f2ed;
-    border-radius: 12px
+    border-radius: 12px;
+    width: 290px;
+    top: 3rem;
+    float: right;
+    position: sticky;
 }
 
 .appointment-form {
-    padding-left: 40px;
-    padding-right: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
 }
 
 .scheduleTourBtn {
