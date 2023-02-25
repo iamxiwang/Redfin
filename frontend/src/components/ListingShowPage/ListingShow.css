@@ -171,14 +171,16 @@
 .listing-description{
     width: 731px;
     margin-bottom: 50px;
-    margin-top: 40px;
+    margin-top: 40px;  
+    line-height: 25px;
 }
 
 
 .listing-description span{
     /* color:#767676; */
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 300;
+  
 }
 .keydetails-list{
     display: flex;
