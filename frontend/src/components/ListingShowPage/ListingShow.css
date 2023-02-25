@@ -57,7 +57,7 @@
 }
 
 #img-right img {
-    width:270px;
+    width:300px;
     height:180px;
     border-radius: 4px;
 
@@ -97,7 +97,7 @@
     border-bottom: 2px solid #e2e2e2;
 }
 .middle-meat h2 {
-    padding-right: 10rem;
+    padding-right: 7rem;
     font-family: 'Libre Franklin', sans-serif;
     font-size: 1.5rem;
     margin-top: 10px;
@@ -158,7 +158,7 @@
 
 .about-this-home {
     font-family: 'Libre Franklin', sans-serif;
-    width:800px;
+    width:740px;
     /* margin-left: 13vw;
     margin-right: 180px; */
     margin-bottom: 100px;
@@ -169,7 +169,7 @@
 }
 
 .listing-description{
-    width: 750px;
+    width: 731px;
     margin-bottom: 50px;
     margin-top: 40px;
 }
