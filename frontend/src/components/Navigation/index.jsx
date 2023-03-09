@@ -43,7 +43,7 @@ function Navigation() {
         </div>
         {}
         <div className='header-right' >
-            <h3>1-844-759-7732</h3>
+            <h3>1-415-231-8101</h3>
             {/* <NavLink className='menue_item_clickable' exact to='/'>Buy</NavLink>
             <NavLink className='menue_item_clickable' exact to='/'>Rent</NavLink>
             <NavLink className='menue_item_clickable' exact to='/'>Sell</NavLink>

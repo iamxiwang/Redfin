@@ -6,8 +6,8 @@ const IndexSearchPage =() => {
     return (
         <div className="home-search">
             <div id='inner-search'>
-                <h1>Find homes first</h1>
-                <h1>Tour homes fast</h1>
+                <h1 className='home-h1'>Find homes first</h1>
+                <h1 className='home-h2'>Tour homes fast</h1>
                 <div className='tab'>
                     {/* <a href="">Buy</a>
                     <a href="">Rent</a>
