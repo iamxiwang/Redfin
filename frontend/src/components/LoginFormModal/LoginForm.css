@@ -79,7 +79,7 @@ button#red-demo {
   font-weight: 1000;
 }
 
-@media (orientation: portrait),(max-width: 900px) {
+@media (orientation: portrait),(max-width: 1000px) {
   button#sign_log{
     font-size: 13px;
     padding: 4px 0.8rem;

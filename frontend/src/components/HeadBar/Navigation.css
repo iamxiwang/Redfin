@@ -151,7 +151,7 @@ Link {
 }
 
 
-@media (orientation: portrait),(max-width: 900px) {
+@media (orientation: portrait),(max-width:830px) {
     .search-container-2 {
         display: none;
     }

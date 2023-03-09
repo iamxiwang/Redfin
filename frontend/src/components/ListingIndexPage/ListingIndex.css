@@ -29,7 +29,7 @@
         margin-left:120px
     }
 }
-@media (orientation: portrait),(max-width: 900px) {
+@media (orientation: portrait),(max-width: 1000px) {
     .userfeed {
         margin-left:20px
     }
