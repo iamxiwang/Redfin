@@ -61,7 +61,7 @@ header {
 #demo {
     background-color: rgb(142, 77, 8);
     border-radius: 100px;
-    color:beige
+    color:white
 }
 .profile {
     position: relative;
@@ -147,4 +147,23 @@ i.fa-solid.fa-user{
 
 .header-right h3{
     margin-right: 40px;
+}
+
+@media (orientation: portrait),(max-width: 900px) {
+    /* .header-right{
+        position: relative;
+        display: none;
+    } */
+    #logo {
+        font-size: 20px;
+    }
+    h3 {
+        display: none;
+    }
+    button#demo {
+        font-size: 12px;
+        padding: 1px 0.8rem;
+    
+       
+    }
 }

@@ -15,8 +15,9 @@
         margin-right:2vw
 
     }
+   
 }
-@media screen and (width: 1512px){
+@media screen and (min-width: 1512px){
     .userfeed {
         margin-left: 7vw;
        
@@ -28,7 +29,11 @@
         margin-left:120px
     }
 }
-
+@media (orientation: portrait),(max-width: 900px) {
+    .userfeed {
+        margin-left:20px
+    }
+}
 
 .FeedHomeSection{
     display: flex;

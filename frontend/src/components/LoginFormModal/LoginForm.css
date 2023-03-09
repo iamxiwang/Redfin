@@ -33,7 +33,7 @@ input[type=text], input[type=password], input[type=datetime-local],input[type=da
 }
 button#red-demo {
   background-color: red;
-  color:beige;
+  color:white;
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -77,4 +77,15 @@ button#red-demo {
 .login-errors{
   color:red;
   font-weight: 1000;
+}
+
+@media (orientation: portrait),(max-width: 900px) {
+  button#sign_log{
+    font-size: 13px;
+    padding: 4px 0.8rem;
+    color:white;
+    background-color:yellowgreen;
+    border: 1px solid yellowgreen;
+    border-radius: 100px;
+  }
 }

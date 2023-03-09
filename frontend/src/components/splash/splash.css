@@ -10,3 +10,8 @@
 .splash,a {
     color:aliceblue
 }
+/* @media (orientation: portrait),(max-width: 831px) {
+    .splash{
+     
+    }
+} */
