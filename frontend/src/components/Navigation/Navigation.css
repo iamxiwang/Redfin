@@ -166,11 +166,19 @@ i.fa-solid.fa-user{
     
     }
     header {
-        justify-content:space-around;
+        justify-content:space-between;
     }
 }
 @media (orientation: portrait),(max-width: 1100px) {
     h3 {
         display: none;
+    }
+}
+@media(max-width:414px){
+    #logo {
+        padding-top:10px;
+        padding-right: 0;
+   
+        font-size: 20px;
     }
 }
