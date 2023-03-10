@@ -145,9 +145,6 @@ h1 {
     .home-h2{
         font-size: 30px;
     }
-    .search-container input[type='text'] {
-        width: 70%;
-    }
 }
 
 @media (max-width:514px) {
@@ -175,5 +172,8 @@ h1 {
     .row-flex {
         display: flex;
         flex-direction: column;
+    }
+    .showsearch input[type=text]{
+        width: 20px;
     }
 }
