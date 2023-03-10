@@ -29,11 +29,7 @@
         margin-left:120px
     }
 }
-@media (orientation: portrait),(max-width: 1000px) {
-    .userfeed {
-        margin-left:20px
-    }
-}
+
 
 .FeedHomeSection{
     display: flex;
@@ -141,3 +137,15 @@
     flex: 1;
     background: #fff;
 } */
+@media (orientation: portrait),(max-width: 1000px) {
+    .userfeed {
+        display: flex;
+        flex-direction: column;
+    }
+    #index-card {
+        width:410px
+    }
+    .FeedHomeSection{
+        margin-left: 20px;
+    }
+}
