@@ -135,13 +135,17 @@ h1 {
 @media (orientation: portrait),(max-width: 1000px) {
     #inner-search {
         padding-left: 50px;
-        padding-top: 180px;
+        padding-top: 100px;
         padding-bottom: 100px;
     }
     .home-h1{
         font-size: 30px;
+        line-height: 2rem;
     }
     .home-h2{
-        display: none;
+        font-size: 30px;
+    }
+    .search-container input[type='text'] {
+        width: 70%;
     }
 }

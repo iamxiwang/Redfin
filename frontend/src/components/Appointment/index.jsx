@@ -87,7 +87,7 @@ const Appointment =({listing}) => {
                 </ul>
                 <h2>Go tour this home</h2>
                 <label >DateTime
-                    <input 
+                    <input className='datatime'
                     value ={tourTime} 
                     onChange={(e) => setTourTime(e.target.value)}
                     type="datetime-local" />

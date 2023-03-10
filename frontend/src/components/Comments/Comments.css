@@ -182,3 +182,26 @@ p#username-black{
     font-weight:300px;
     margin-left: 4px;
 }
+
+@media (max-width:614px) {
+    .comment-container {
+        width: 80vw;
+    }
+    .gray-container {
+        width:59vw
+    }
+    #comment-value {
+        width:65vw;
+        margin-right: 0;
+    }
+    #red-save{
+        width:12vw;
+        font-size: 0.6rem;
+    }
+    .header-line h2{
+        font-size: 1rem;
+    }
+    .header-line img , .commenter-info img {
+        width:35px;
+    }
+}

@@ -152,7 +152,15 @@
 
 @media (max-width: 514px){
     .userfeed{
-        margin-left: 0px;
-        margin-right: 10px;
+        margin-left: 10vw;
+        /* margin-right: 10px; */
+    }
+    #index-card {
+        width:70vw
+    }
+    .interactive {
+        margin-bottom: 50px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px 0 rgb(0 0 0 / 15%);
     }
 }
