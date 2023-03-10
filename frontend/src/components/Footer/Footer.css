@@ -28,12 +28,20 @@
     text-align: end;
     color:white
 }
-@media(max-width:614px){
+@media (max-width:614px){
     .foot-section p{
         display: none;
     }
     .github-linkedin{
-        margin-left: 20vw;
+        margin-left: 30vw;
     }
 
+    .fa-brands, .fab {
+    font-weight: 800;
+    font-size: 3.5rem;
+    margin-right: 20px;
+    background-color:black;
 }
+
+}
+
