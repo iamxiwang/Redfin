@@ -54,3 +54,9 @@ width: 100px;
   
     background: #fff;
 }
+@media(max-width:414px){
+    .aboutHomeMap .map-container {
+        width: 320px;
+        height: 400px;
+    }
+}

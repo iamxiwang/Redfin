@@ -224,3 +224,27 @@
 .inline-block{
     width:1070px;
 }
+
+@media(max-width:414px){
+    .img-container {
+        flex-direction: column;
+    }
+    #img-right{
+        display: none;
+    }
+    #single-listing-img {
+        width: 300px;
+        height: 180px;
+        border-radius: 4px;
+    }
+    .listing-description {
+        width: 331px;
+    }
+    .about-this-home{
+        width:313px;
+    }
+    .inline-block {
+        width: 370px;
+    }
+    
+}

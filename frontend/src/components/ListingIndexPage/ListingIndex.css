@@ -149,3 +149,10 @@
         margin-left: 20px;
     }
 }
+
+@media (max-width: 414px){
+    .userfeed{
+        margin-left: 0px;
+        margin-right: 10px;
+    }
+}
