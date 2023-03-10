@@ -158,3 +158,12 @@
 .tour-list{
     margin-top: 50px;
 }
+
+@media (max-width:414px){
+    .appointment-container{
+        margin:20px;
+        margin-right: 50px;
+        margin-bottom: 30px;
+    
+    }
+}
