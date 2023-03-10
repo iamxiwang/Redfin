@@ -65,7 +65,7 @@
 
 .abp-address {
     display: flex;
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
     width: auto;
     padding-bottom: 30px;
     
@@ -267,17 +267,22 @@
     .middle-meat h2 {
         width:50px;
         font-size: 1rem;
-
     }
     
     .abp-address{
         padding-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0.8rem;
     }
+    
     .rightSmallMap{
         display: none;
     }
-    
-
+    div#bold-address, div.abp-address#sub-text {
+        font-size: 0.8rem;
+        padding-right: 5px;
+    }
     .middle-meat #abp-beds, .middle-meat #abp-baths, .middle-meat #abp-sqft {
         width:20px;
         padding-right: 30px;
@@ -288,6 +293,4 @@
     #abp-string{
         font-size: 0.8rem;
     }
-
-
 }
