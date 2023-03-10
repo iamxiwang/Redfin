@@ -233,7 +233,7 @@
         display: none;
     }
     #single-listing-img {
-        width: 350px;
+        width: 80vw;
         height: 240px;
         border-radius: 20px;
     }
@@ -278,13 +278,12 @@
         padding-bottom: 20px;
         display: flex;
         flex-wrap: wrap;
-        font-size: 0.8rem;
     }
     
     .rightSmallMap{
         display: none;
     }
-    div#bold-address, div.abp-address#sub-text {
+    div#bold-address, div#sub-text {
         font-size: 0.8rem;
         padding-right: 5px;
     }

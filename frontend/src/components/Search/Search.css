@@ -149,3 +149,31 @@ h1 {
         width: 70%;
     }
 }
+
+@media (max-width:514px) {
+    .search-result-page {
+        flex-direction: column;
+    }
+    .search-map .map-container {
+        width: 100vw;
+        height: 50vh;
+        position: sticky !important;
+        top: 0px;
+    }
+    .filtered-listings {
+        margin-top: 20px;
+    }
+    .filtered-listings h1{
+        font-size: 1.2rem;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    p#homeaddress {
+        font-size: 0.7rem;
+        margin-bottom: 10px;
+    }
+    .row-flex {
+        display: flex;
+        flex-direction: column;
+    }
+}
