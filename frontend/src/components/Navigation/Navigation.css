@@ -174,7 +174,7 @@ i.fa-solid.fa-user{
         display: none;
     }
 }
-@media(max-width:414px){
+@media(max-width:614px){
     #logo {
         padding-top:10px;
         padding-right: 0;
