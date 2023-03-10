@@ -132,7 +132,7 @@ h1 {
 }
 
 
-@media (orientation: portrait),(max-width: 900px) {
+@media (orientation: portrait),(max-width: 1000px) {
     #inner-search {
         padding-left: 50px;
         padding-top: 180px;

@@ -149,3 +149,13 @@ Link {
 .header-right-2 h3{
     margin-right: 20px;
 }
+
+
+@media (orientation: portrait),(max-width:830px) {
+    .search-container-2 {
+        display: none;
+    }
+    #logo-2 {
+        font-size: 25px;
+    }
+}
