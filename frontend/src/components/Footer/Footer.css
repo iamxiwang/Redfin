@@ -28,3 +28,12 @@
     text-align: end;
     color:white
 }
+@media(max-width:614px){
+    .foot-section p{
+        display: none;
+    }
+    .github-linkedin{
+        margin-left: 20vw;
+    }
+
+}

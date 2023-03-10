@@ -166,4 +166,7 @@
         margin-bottom: 30px;
     
     }
+    input[type=datetime-local]{
+        min-width: 100%;
+    }
 }

@@ -238,7 +238,8 @@
         border-radius: 4px;
     }
     .listing-description {
-        width: 331px;
+        width: 321px;
+        margin-right: 10px;
     }
     .about-this-home{
         width:313px;
@@ -246,6 +247,47 @@
     .inline-block {
         width: 370px;
     }
+    .keydetail {
+        font-size: 0.7rem;
+    }
+    .text-right{
+        font-size: 0.7rem;
+        width: 100px;
+        /* padding-left: 0px; */
+    }
+    .middle-meat{
+        display: flex;
+        flex-wrap: wrap;
+        width:331px;
+        height: 30px;
+    }
+    .column-name-gray {
+        width: 50px;
+    }
+    .middle-meat h2 {
+        width:50px;
+        font-size: 1rem;
+
+    }
     
+    .abp-address{
+        padding-bottom: 20px;
+    }
+    .rightSmallMap{
+        display: none;
+    }
     
+
+    .middle-meat #abp-beds, .middle-meat #abp-baths, .middle-meat #abp-sqft {
+        width:20px;
+        padding-right: 30px;
+    }
+    #abp-number{
+        font-size: 0.8rem;
+    }
+    #abp-string{
+        font-size: 0.8rem;
+    }
+
+
 }
