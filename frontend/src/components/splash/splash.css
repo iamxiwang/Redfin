@@ -16,3 +16,8 @@
      
     }
 }
+@media (max-width:414px) {
+    .splash {
+        background-image: url('Vivian_Xi_a_girl_dreming_her_future_real_estate_15f9595f-a35f-4995-b807-09b6472127cf.png');
+    }
+}
