@@ -228,6 +228,7 @@
 @media(max-width:614px){
     .img-container {
         flex-direction: column;
+        width: 80vw;
     }
     #img-right{
         display: none;
@@ -249,6 +250,12 @@
     .listing-description span{
         font-size: 0.8rem;
         line-height: 0px;
+    }
+    .listing-main-stats {
+        width:80vw
+    }
+    .middle-combine {
+        width:80vw
     }
     .about-this-home{
         width:313px;
