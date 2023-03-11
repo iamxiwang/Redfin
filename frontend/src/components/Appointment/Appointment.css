@@ -161,13 +161,16 @@
 
 @media (max-width:614px){
     .appointment-container{
-        margin:20px;
-        margin-right: 50px;
+        margin-top:20px;
+        width:300px;
         margin-bottom: 30px;
     
     }
     .datetime {
         width: 100%;
         padding: 12px;
+    }
+    .about-this-home {
+        margin-bottom: 40px;
     }
 }

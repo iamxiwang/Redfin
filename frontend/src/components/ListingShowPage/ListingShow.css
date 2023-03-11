@@ -242,6 +242,10 @@
         margin-right: 10px;
     
     }
+    .single-listing-container {
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
     .listing-description span{
         font-size: 0.8rem;
         line-height: 0px;
@@ -296,5 +300,9 @@
     }
     #abp-string{
         font-size: 0.8rem;
+    }
+    .inline-block {
+        display: flex;
+        flex-direction: column;
     }
 }
