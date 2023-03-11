@@ -181,4 +181,16 @@ i.fa-solid.fa-user{
    
         font-size: 20px;
     }
+    ul.profile-dropdown {
+        width:80vw;
+        height: 20vh;
+    }
+    #my-greenfin li, #my-setting li {
+        width:100px;
+        font-size: 0.5rem;
+
+    }
+    li#greenfin-v1, li#setting-v1 {
+        font-size: 0.8rem;
+    }
 }
