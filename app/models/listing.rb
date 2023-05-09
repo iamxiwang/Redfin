@@ -50,6 +50,10 @@ class Listing < ApplicationRecord
         foreign_key: :listing_id,
         class_name: :Appointment
 
+    has_many :likes,
+        foreign_key: :listing_id,
+        class_name: :Like
+
     has_many_attached :photos
 
     # def ensure_photo
