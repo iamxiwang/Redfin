@@ -7,7 +7,7 @@ gem "bcrypt"
 gem "jbuilder"
 gem "faker"
 gem "aws-sdk-s3"
-gem "ruby-vips"
+gem 'sassc'
 
 
 
