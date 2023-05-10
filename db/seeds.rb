@@ -25,13 +25,15 @@ demo = User.create!(
     email: 'demo@user.io', 
     password: 'password'
 )
+puts "before opeing the url"
 demo.img.attach(io: URI.open("https://ssl.cdn-redfin.com/system_files/images/76/076/51600076_158_0.jpg"),filename: "demo.jpg")
-
+puts "Done opeing the url"
 Baobob = User.create!(
     username: 'Baobob',
     email: 'baobob@gmail.com',
     password: 'password'
 )
+puts "before opeing baobob the url"
 Baobob.img.attach(
     io: URI.open("https://images.pexels.com/photos/14208139/pexels-photo-14208139.jpeg?auto=compress&cs=tinysrgb&w=600"),filename: 'babob.jpg')
 
@@ -74,8 +76,8 @@ l1 = Listing.create!(
 
 l1.photos.attach([
     {io: URI.open("https://ssl.cdn-redfin.com/photo/9/bigphoto/295/422701295_0.jpg"),filename: "l1main.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/bigphoto/295/422701295_11_0.jpg"),filename: "l1second.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/bigphoto/295/422701295_38_0.jpg"),filename: "l1third.jpg"}
+    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/mbpaddedwide/802/genMid.456802_13_5.jpg"),filename: "l1second.jpg"},
+    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/mbpaddedwide/802/genMid.456802_39_4.jpg"),filename: "l1third.jpg"}
 ])
 
 l2 = Listing.create!(
@@ -137,8 +139,8 @@ l3 = Listing.create!(
         
 l3.photos.attach([
     {io: URI.open("https://ssl.cdn-redfin.com/photo/9/bigphoto/548/422686548_0.jpg"),filename: "l3main.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/mbpaddedwide/548/genMid.422686548_15_2.jpg"),filename: "l3second.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/bigphoto/548/422686548_54_3.jpg"),filename: "l3third.jpg"}
+    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/mbpaddedwide/270/genMid.423736270_15_0.jpg"),filename: "l3second.jpg"},
+    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/mbpaddedwide/270/genMid.423736270_45_0.jpg"),filename: "l3third.jpg"}
 
 ])
 
@@ -170,8 +172,8 @@ l4 = Listing.create!(
         
 l4.photos.attach([
     {io: URI.open("https://ssl.cdn-redfin.com/photo/77/bigphoto/117/422701117_1.jpg"),filename: "l4main.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/77/mbpaddedwide/117/genMid.422701117_20_1.jpg"),filename: "l4second.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/77/bigphoto/117/422701117_79_1.jpg"),filename: "l4third.jpg"}
+    {io: URI.open("https://ssl.cdn-redfin.com/photo/77/mbpaddedwide/117/genMid.422701117_20_4.jpg"),filename: "l4second.jpg"},
+    {io: URI.open("https://ssl.cdn-redfin.com/photo/77/mbpaddedwide/117/genMid.422701117_60_4.jpg"),filename: "l4third.jpg"}
 
 ])
 
@@ -264,8 +266,8 @@ l7 = Listing.create!(
         
 l7.photos.attach([
     {io: URI.open("https://ssl.cdn-redfin.com/photo/9/bigphoto/882/422711882_2.jpg"),filename: "l7main.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/bigphoto/882/422711882_17_2.jpg"),filename: "l7second.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/bigphoto/882/422711882_18_2.jpg"),filename: "l7third.jpg"}
+    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/mbpaddedwide/749/genMid.423738749_13_0.jpg"),filename: "l7second.jpg"},
+    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/mbpaddedwide/749/genMid.423738749_40_0.jpg"),filename: "l7third.jpg"}
 
 ])
 
@@ -551,9 +553,9 @@ l16 = Listing.create!(
 
 
 l16.photos.attach([
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/27/bigphoto/327/322089327_1.jpg"),filename: "l16main.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/27/mbpaddedwide/327/genMid.322089327_13_2.jpg"),filename: "l16second.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/27/mbpaddedwide/327/genMid.322089327_39_2.jpg"),filename: "l16third.jpg"}
+    {io: URI.open("https://ssl.cdn-redfin.com/photo/27/bigphoto/327/322089327_5.jpg"),filename: "l16main.jpg"},
+    {io: URI.open("https://ssl.cdn-redfin.com/photo/27/mbpaddedwide/327/genMid.322089327_13_6.jpg"),filename: "l16second.jpg"},
+    {io: URI.open("https://ssl.cdn-redfin.com/photo/27/mbpaddedwide/327/genMid.322089327_39_5.jpg"),filename: "l16third.jpg"}
 ])
 # l17
 
@@ -613,9 +615,9 @@ l18 = Listing.create!(
 
 
 l18.photos.attach([
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/bigphoto/754/422681754_0.jpg"),filename: "l18main.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/mbpaddedwide/754/genMid.422681754_13_1.jpg"),filename: "l18second.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/mbpaddedwide/754/genMid.422681754_41_2.jpg"),filename: "l18third.jpg"}
+    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/bigphoto/125/423738125_1.jpg"),filename: "l18main.jpg"},
+    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/mbpaddedwide/125/genMid.423738125_11_1.jpg"),filename: "l18second.jpg"},
+    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/mbpaddedwide/125/genMid.423738125_33_1.jpg"),filename: "l18third.jpg"}
 ])
 
 # l19
