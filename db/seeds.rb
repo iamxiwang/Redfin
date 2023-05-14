@@ -26,7 +26,7 @@ demo = User.create!(
     password: 'password'
 )
 puts "before opeing the url"
-demo.img.attach(io: URI.open("https://ssl.cdn-redfin.com/system_files/images/76/076/51600076_158_0.jpg"),filename: "demo.jpg")
+demo.img.attach(io: URI.open("https://greenfin-seeds.s3.us-west-1.amazonaws.com/demo-lition.jpeg"),filename: "demo.jpg")
 puts "Done opeing the url"
 Baobob = User.create!(
     username: 'Baobob',
@@ -75,9 +75,9 @@ l1 = Listing.create!(
 
 
 l1.photos.attach([
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/bigphoto/295/422701295_0.jpg"),filename: "l1main.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/mbpaddedwide/802/genMid.456802_13_5.jpg"),filename: "l1second.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/mbpaddedwide/802/genMid.456802_39_4.jpg"),filename: "l1third.jpg"}
+    {io: URI.open("https://greenfin-seeds.s3.us-west-1.amazonaws.com/L1-1.jpeg"),filename: "l1main.jpg"},
+    {io: URI.open("https://greenfin-seeds.s3.us-west-1.amazonaws.com/L1-2.jpeg"),filename: "l1second.jpg"},
+    {io: URI.open("https://greenfin-seeds.s3.us-west-1.amazonaws.com/L1-3.jpeg"),filename: "l1third.jpg"}
 ])
 
 l2 = Listing.create!(
