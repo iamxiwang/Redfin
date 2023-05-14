@@ -105,9 +105,9 @@ l2 = Listing.create!(
 
         
 l2.photos.attach([
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/bigphoto/702/422690702_0.jpg"),filename: "l2main.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/bigphoto/702/422690702_11_1.jpg"),filename: "l2second.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/bigphoto/702/422690702_12_1.jpg"),filename: "l2third.jpg"}
+    {io: URI.open("https://greenfin-seeds.s3.us-west-1.amazonaws.com/L2-1.jpeg"),filename: "l2main.jpg"},
+    {io: URI.open("https://greenfin-seeds.s3.us-west-1.amazonaws.com/L2-2.jpeg"),filename: "l2second.jpg"},
+    {io: URI.open("https://greenfin-seeds.s3.us-west-1.amazonaws.com/L2-3.jpeg"),filename: "l2third.jpg"}
 
 ])
 
@@ -138,9 +138,9 @@ l3 = Listing.create!(
 
         
 l3.photos.attach([
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/bigphoto/548/422686548_0.jpg"),filename: "l3main.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/mbpaddedwide/270/genMid.423736270_15_0.jpg"),filename: "l3second.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/mbpaddedwide/270/genMid.423736270_45_0.jpg"),filename: "l3third.jpg"}
+    {io: URI.open("https://greenfin-seeds.s3.us-west-1.amazonaws.com/L3-1.jpeg"),filename: "l3main.jpg"},
+    {io: URI.open("https://greenfin-seeds.s3.us-west-1.amazonaws.com/L3-2.jpeg"),filename: "l3second.jpg"},
+    {io: URI.open("https://greenfin-seeds.s3.us-west-1.amazonaws.com/L3-3.jpeg"),filename: "l3third.jpg"}
 
 ])
 
@@ -171,9 +171,9 @@ l4 = Listing.create!(
 
         
 l4.photos.attach([
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/77/bigphoto/117/422701117_1.jpg"),filename: "l4main.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/77/mbpaddedwide/117/genMid.422701117_20_4.jpg"),filename: "l4second.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/77/mbpaddedwide/117/genMid.422701117_60_4.jpg"),filename: "l4third.jpg"}
+    {io: URI.open("https://greenfin-seeds.s3.us-west-1.amazonaws.com/L4-1.jpeg"),filename: "l4main.jpg"},
+    {io: URI.open("https://greenfin-seeds.s3.us-west-1.amazonaws.com/L4-2.jpeg"),filename: "l4second.jpg"},
+    {io: URI.open("https://greenfin-seeds.s3.us-west-1.amazonaws.com/L4-3.jpeg"),filename: "l4third.jpg"}
 
 ])
 
@@ -202,9 +202,9 @@ l5 = Listing.create!(
 
         
 l5.photos.attach([
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/bigphoto/674/422699674_0.jpg"),filename: "l5main.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/bigphoto/674/422699674_12_0.jpg"),filename: "l5second.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/bigphoto/674/422699674_2_0.jpg"),filename: "l5third.jpg"}
+    {io: URI.open("https://greenfin-seeds.s3.us-west-1.amazonaws.com/L5-1.jpeg"),filename: "l5main.jpg"},
+    {io: URI.open("https://greenfin-seeds.s3.us-west-1.amazonaws.com/L5-2.jpeg"),filename: "l5second.jpg"},
+    {io: URI.open("https://greenfin-seeds.s3.us-west-1.amazonaws.com/L5-3.jpeg"),filename: "l5third.jpg"}
 
 ])
 
@@ -233,9 +233,9 @@ l6 = Listing.create!(
 
         
 l6.photos.attach([
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/bigphoto/985/422697985_1.jpg"),filename: "l6main.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/mbpaddedwide/985/genMid.422697985_7_1.jpg"),filename: "l6second.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/mbpaddedwide/985/genMid.422697985_22_1.jpg"),filename: "l6third.jpg"}
+    {io: URI.open("https://greenfin-seeds.s3.us-west-1.amazonaws.com/L6-1.jpeg"),filename: "l6main.jpg"},
+    {io: URI.open("https://greenfin-seeds.s3.us-west-1.amazonaws.com/L6-2.jpeg"),filename: "l6second.jpg"},
+    {io: URI.open("https://greenfin-seeds.s3.us-west-1.amazonaws.com/L6-3.jpeg"),filename: "l6third.jpg"}
 
 ])
 
@@ -265,13 +265,13 @@ l7 = Listing.create!(
 
         
 l7.photos.attach([
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/bigphoto/882/422711882_2.jpg"),filename: "l7main.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/mbpaddedwide/749/genMid.423738749_13_0.jpg"),filename: "l7second.jpg"},
-    {io: URI.open("https://ssl.cdn-redfin.com/photo/9/mbpaddedwide/749/genMid.423738749_40_0.jpg"),filename: "l7third.jpg"}
+    {io: URI.open("https://greenfin-seeds.s3.us-west-1.amazonaws.com/L7-1.jpeg"),filename: "l7main.jpg"},
+    {io: URI.open("https://greenfin-seeds.s3.us-west-1.amazonaws.com/L7-2.jpeg"),filename: "l7second.jpg"},
+    {io: URI.open("https://greenfin-seeds.s3.us-west-1.amazonaws.com/L7-3.jpeg"),filename: "l7third.jpg"}
 
 ])
 
-# l8
+# S3 SEEDS UNTIL ABOVE
 
 l8 = Listing.create!(
             agent_id: 9,
