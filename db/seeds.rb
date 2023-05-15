@@ -719,6 +719,7 @@ Comment.create!(
     author_id: demo.id,
 )
 
+ApplicationRecord.connection.reset_pk_sequence!('likes')
 
 Like.create!(
     user_id: demo.id,

@@ -168,3 +168,25 @@
         width:80vw
     }
 }
+
+.interactive {
+    position: relative;
+}
+
+.interactive img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.interactive .fas.fa-heart {
+    position: absolute;
+    font-size: 30px;
+    top: 10px;
+    right: 10px;
+    color:ivory
+    
+}
+.interactive  .fas.fa-heart.liked{
+    color: red; 
+}

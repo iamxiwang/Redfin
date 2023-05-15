@@ -3,6 +3,7 @@ import csrfFetch from "./csrf";
 export const RECEIVE_LIKES = 'likes/RECEIVE_LIKES';
 export const REMOVE_LIKE = 'likes/REMOVE_LIKE';
 export const RECEIVE_LIKE ='likes/RECEIVE_LIKE'
+export const CLEAR_LIKES = 'likes/CLEAR_LIKES'
 
 //action creator function
 
@@ -27,12 +28,26 @@ const removeLike = (likeId) => (
     }
 )
 
+const clearLikes = () => ({
+    type: CLEAR_LIKES
+})
 
+export {
+    receiveLikes,
+    receiveLike,
+    removeLike,
+    clearLikes, // Add this line
+};
 //store selector i only need to display all listings associated with the logged in user
 
 export const getLikes = (state) => {
     if (state && state.likes){
-        return Object.values(state.likes)
+        let res= []
+        let arr =  Object.values(state.likes)
+        for(let i = 0; i < arr.length; i++){
+            res.push(arr[i].listingId)
+        }
+        return res
     }
 }
 
@@ -81,6 +96,8 @@ const likesReducer = (state = {}, action) => {
             const newState = {...state}
             delete newState[action.payload]
             return newState
+        case CLEAR_LIKES:
+            return {}
         default:
             return state
     }
