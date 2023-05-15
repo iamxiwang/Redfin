@@ -4,6 +4,7 @@ import listingsReducer from "./listings";
 import sessionReducer from "./session";
 import commentsReducer from'./comment'
 import appointmentsReducer from "./appointment";
+import likesReducer from "./like";
 
 
 
@@ -11,7 +12,8 @@ const rootReducer = combineReducers({
     session: sessionReducer,
     listings: listingsReducer,
     comments: commentsReducer,
-    appointments: appointmentsReducer
+    appointments: appointmentsReducer,
+    likes: likesReducer
 
 });
 

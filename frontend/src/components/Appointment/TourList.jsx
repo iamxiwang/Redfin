@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react"
 import { useDispatch, useSelector } from 'react-redux';
-import Appointment from ".";
 import { fetchAppointments, getAppointments, updateAppointment,deleteAppointment} from "../../store/appointment";
 import { fetchListing, fetchListings, getListings } from "../../store/listings";
 

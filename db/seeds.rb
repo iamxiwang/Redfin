@@ -9,6 +9,7 @@ require 'open-uri'
 
 puts "Destroying tables..."
 # Unnecessary if using `rails db:seed:replant`
+Like.destroy_all
 Appointment.destroy_all
 Comment.destroy_all
 Listing.destroy_all
@@ -719,3 +720,28 @@ Comment.create!(
 )
 
 
+Like.create!(
+    user_id: demo.id,
+    listing_id: l1.id
+)
+Like.create!(
+    user_id: demo.id,
+    listing_id: l3.id
+)
+Like.create!(
+    user_id: demo.id,
+    listing_id: l5.id
+)
+Like.create!(
+    user_id: demo.id,
+    listing_id: l11.id
+)
+
+Like.create!(
+    user_id: demo.id,
+    listing_id: l12.id
+)
+Like.create!(
+    user_id: demo.id,
+    listing_id: l20.id
+)
