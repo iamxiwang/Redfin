@@ -16,22 +16,13 @@ class Api::LikesController < ApplicationController
         end
     end
 
-    # def update
-    #     # debugger
-    #     @appointment = Appointment.find_by(id: params[:id])
-
-    #     if @appointment.update(appointment_params)
-    #         render :show
-    #     else
-    #         render json: @appointment.errors.full_messages, status: 422
-    #     end
-    # end
-
     def destroy
         @like =Like.find_by(id: params[:id])
 
         if @like.destroy
             render json: {messages: 'like is sucessfully destroyed'}
+        else
+            render json: { error: 'Failed to destroy the like' }, status: 500
         end
     end
 
