@@ -37,17 +37,12 @@ export {
     receiveLike,
     removeLike,
     clearLikes, // Add this line
-};
+  };
 //store selector i only need to display all listings associated with the logged in user
 
 export const getLikes = (state) => {
     if (state && state.likes){
-        let res= []
-        let arr =  Object.values(state.likes)
-        for(let i = 0; i < arr.length; i++){
-            res.push(arr[i].listingId)
-        }
-        return res
+        return Object.values(state.likes)
     }
 }
 
@@ -96,6 +91,8 @@ const likesReducer = (state = {}, action) => {
             const newState = {...state}
             delete newState[action.payload]
             return newState
+        case RECEIVE_LIKE:
+            return {...state,[action.payload.id]: action.payload}
         case CLEAR_LIKES:
             return {}
         default:

@@ -735,12 +735,12 @@ Like.create!(
 )
 Like.create!(
     user_id: demo.id,
-    listing_id: l11.id
+    listing_id: l8.id
 )
 
 Like.create!(
     user_id: demo.id,
-    listing_id: l12.id
+    listing_id: l10.id
 )
 Like.create!(
     user_id: demo.id,

@@ -1,5 +1,5 @@
 @likes.each do |like|
     json.set! like.id do
-        json.extract! like, :listing_id
+        json.extract! like, :id,:listing_id
     end
 end
