@@ -22,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/iamxiwang/Redfin/issues"
   },
-  "homepage": "https://github.com/iamxiwang/Redfin#readme"
+  "homepage": "https://github.com/iamxiwang/Redfin#readme",
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0"
+  }
 }
