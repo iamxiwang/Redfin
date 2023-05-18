@@ -72,9 +72,16 @@ export const restoreSession = () => async dispatch => {
 };
 
 
+// const initialState = { 
+//   user: JSON.parse(sessionStorage.getItem("currentUser"))
+//  };
+
+let currentUser = sessionStorage.getItem("currentUser");
+currentUser = currentUser ? JSON.parse(currentUser) : null;
+
 const initialState = { 
-  user: JSON.parse(sessionStorage.getItem("currentUser"))
- };
+    user: currentUser
+};
 
 const sessionReducer = (state = initialState, action) => {
   switch (action.type) {
