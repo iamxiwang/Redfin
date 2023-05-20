@@ -20,7 +20,7 @@ const SearchBar = () =>{
         
     }
     return (
-        <form onSubmit={handleSubmit}>
+        <form className ='search-form' onSubmit={handleSubmit}>
             <input type="text" placeholder="Enter a ZIP code" 
             value={searchValue} 
             onChange={(e) => (setSearchValue(e.target.value))}/>

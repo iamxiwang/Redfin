@@ -21,13 +21,6 @@ const Appointment =({listing}) => {
     const [submit, setSubmit] = useState(false)
 
 
-    // useEffect( () => {
-    //     if(errors.length === 0 && submit){
-    //         history.push('/mygreenfin/tours')
-    //     }
-    //     setSubmit(false)
-    // }, [errors,submit])
-
     const handleSubmit = async (e) => {
         e.preventDefault()
         setSubmit(true)
