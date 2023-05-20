@@ -16,24 +16,35 @@ a {
     text-decoration: none;
     font-size: 17px;
 }
-.search-container input[type='text'] {
-    width: 40%;
+.search-form input[type='text'] {
+    width: 30%;
+    border:none;
+    height: 40px;
+    border-radius: 0;
+    margin-top: 0;
+    margin-bottom: 0
 }
 
+.search-form{
+    display: flex;
+    align-items: center;
 
-.search-container button {
-    margin-top: 10px;
+}
+.search-form button {
+    /* margin-top: 10px; */
     margin-right: 16px;
-    height:42px;
+    height:40px;
+    width:40px;
+    align-items: center;
     background: darkgreen;
     font-size: 17px;
-    border: 1px solid darkgreen;
-    border-radius: 2px;
+    border: none;
+    border-radius: 0px;
     cursor: pointer;
     padding-top:6px;
     padding-right: 10px;
     padding-left: 10px;
-    padding-bottom: 8px;
+    padding-bottom: 6px;
 }
 
 .search-container button:hover {

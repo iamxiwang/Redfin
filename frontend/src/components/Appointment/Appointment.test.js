@@ -6,6 +6,12 @@ import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk'; // Import Redux Thunk middleware
 import Appointment from '/Users/ou/Desktop/Fullstack/redfin_clone/frontend/src/components/Appointment/index.jsx';
 
+// Mocking and isolation: To test components in isolation, you often need to mock external dependencies or resources, such as network requests, browser APIs, or storage (like sessionStorage). This allows you to control the test environment and ensure that tests are predictable and independent of external factors.
+
+// Redux integration: If your app uses Redux for state management, integrating Redux into your tests requires additional setup. This involves creating mock stores, setting up Redux middleware, and mocking Redux actions and reducers.
+
+
+
 const mockStore = configureStore([thunk]);
 
 const listingData = {
