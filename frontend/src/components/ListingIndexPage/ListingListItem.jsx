@@ -14,7 +14,7 @@ const ListingListItem = ({listing}) => {
     let userLikes = useSelector(getLikes).map((like) => like.listingId)
     
     const [isLiked, setLike] = useState(userLikes.includes((listing.id)))
-    console.log(userLikes, isLiked)
+  
 
 
     useEffect(

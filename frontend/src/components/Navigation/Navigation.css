@@ -8,6 +8,7 @@ header {
     justify-content: space-between;
     align-items: center;
     font-family: 'Libre Franklin', sans-serif;
+    background-color: rgba(0, 0, 0, 0.2);
     /* color: white; */
 }
 
@@ -33,7 +34,7 @@ header {
 }
 
 
-#sign_log , #demo {
+/* #sign_log , #demo {
     color:black;
     box-sizing: border-box;
     text-rendering: optimizeLegibility;
@@ -47,8 +48,7 @@ header {
     font-family: inherit;
     font-weight: 700;
     font-size: 1rem;
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
+    background:transparent;
     text-align: center;
     vertical-align: middle;
     white-space: nowrap;
@@ -57,11 +57,18 @@ header {
     box-shadow: none;
     margin: 5px;
     cursor:pointer
+} */
+button#sign_log{
+    background: transparent;
+    border:none;
+    color:white;
+    font-size: 20px;
 }
-#demo {
-    background-color: rgb(142, 77, 8);
+button#demo {
+    border: none;
+    background: linear-gradient(90deg, #E2FF24 0%, #24FE41 100%);
     border-radius: 100px;
-    color:white
+    color:black;
 }
 .profile {
     position: relative;
