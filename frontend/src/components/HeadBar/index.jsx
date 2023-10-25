@@ -48,7 +48,7 @@ function Navigation() {
             </div>
         </div>       
         <div className='header-right-2' >
-            <h3>1-415-231-8101</h3>
+            {/* <h3>1-415-231-8101</h3> */}
             {/* <NavLink className='menue_item_clickable-2' exact to='/'>Buy</NavLink>
             <NavLink className='menue_item_clickable-2' exact to='/'>Rent</NavLink>
             <NavLink className='menue_item_clickable-2' exact to='/'>Sell</NavLink>

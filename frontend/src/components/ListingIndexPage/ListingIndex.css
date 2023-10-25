@@ -64,7 +64,7 @@
     border-radius: 100px;
     margin: 5px;
     height: 40px;
-    padding: 12px 1.5rem 12px 1.5rem;
+    padding: 12px 2rem 12px 2rem;
     text-align: center;
     vertical-align: middle;
     white-space: nowrap;
@@ -76,8 +76,9 @@
  
 }
 #v2-1{
-    background-color: darkgreen;
-    color:aliceblue
+    background: linear-gradient(100deg, #E2FF24 0%, #24FE41 100%);
+    color:black;
+    border:none;
 }
 
 .row-flex{
