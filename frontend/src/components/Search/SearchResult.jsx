@@ -25,7 +25,7 @@ const SearchResult =() => {
     if(Object.keys(listings).length === 0){
         return (
             <div className="abc">
-            <Navigation />
+            <Navigation textColor='green' backgroundColor='white'/>
             <div className="nodatafind"> 
             <i className="fa-solid fa-face-sad-cry"></i>
             <h2>Sorry, we coudn't find any data</h2>
@@ -39,7 +39,7 @@ const SearchResult =() => {
         const center = {lat: firstReturedListing.lat,lng:firstReturedListing.lng}
         return (
         <>
-        <Navigation />
+        <Navigation textColor='green' backgroundColor='white'/>
         <div className="search-result-page">
             <div className="search-map">
                     {/* pass mutiple props to component */}

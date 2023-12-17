@@ -8,12 +8,11 @@ import './ListingIndex.css'
 const ListingIndexPage =() => {
     const dispatch = useDispatch()
     const listings = useSelector(getListings)
-    // console.log(listings)
+    console.log(listings)
 
     useEffect( () => {
         dispatch(fetchListings())
-
-    },[])
+    },[dispatch]) //[]
 
     return (
     <div className='userfeed'>

@@ -27,14 +27,14 @@ const ListingShowPage = () => {
         
             return (
                 <div >
-                    <Navigation />
+                    <Navigation textColor = 'green'
+                    backgroundColor='white' />
                     <div className='media'>
                     <ListingDetails listing= {listing} />
                     
-                    {/* <HomeFacts listing ={listing}/> */}
+                    
                     </div>
-                    {/* <HouseForm /> */}
-                    {/* <Map listing={listing} /> */}
+                    
                     <Footer />
                 </div>
             )

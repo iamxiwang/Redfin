@@ -29,8 +29,8 @@ function Navigation() {
     sessionLinks = (
         <>
         <button id='demo'  onClick={handleDemo}>Demo User</button>
-        <LoginFormModal />
-        <SignupFormModal />
+        <LoginFormModal textColor='white'/>
+        <SignupFormModal textColor='white'/>
         </>
     );
   }
