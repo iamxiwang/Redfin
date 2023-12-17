@@ -107,9 +107,8 @@ h1 {
     min-height: 100%;
 }
 .filtered-listings {
-    margin-left: 20px;
-    min-height:100%;
-    margin-top: 70px;
+    padding:80px 20px;
+    width:50vw
 }
 
 

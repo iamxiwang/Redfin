@@ -80,7 +80,7 @@
 
 .row-flex{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr)); /* Adjust to your desired minimum column width */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 0.5fr)); /* Adjust to your desired minimum column width */
     grid-template-rows: repeat(4, 1fr);
     column-gap: 60px;
     row-gap: 100px;
