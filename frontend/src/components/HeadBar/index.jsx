@@ -9,10 +9,14 @@ import * as sessionActions from "../../store/session";
 
 import './Navigation.css';
 
-function Navigation() {
+function Navigation({textColor, backgroundColor}) {
   const sessionUser = useSelector(state => state.session.user);
   const dispatch = useDispatch();
-  
+  const style = {
+    color: textColor,
+    backgroundColor: backgroundColor,
+  };
+
 
 
  // login a prefix user
@@ -32,17 +36,17 @@ function Navigation() {
     sessionLinks = (
         <>
         <button id='demo'  onClick={handleDemo}>Demo User</button>
-        <LoginFormModal />
-        <SignupFormModal />
+        <LoginFormModal textColor='green'/>
+        <SignupFormModal textColor= 'green'/>
         </>
     );
   }
 
   return (
-    <div className='home-hero-outer-2'>
+    <div  style={{ backgroundColor: backgroundColor }}className='home-hero-outer-2'>
     
         <div className='header-left-2'>
-            <NavLink id='logo-2' exact to="/">GREENFIN</NavLink>
+            <NavLink style = {style} id='logo-2' exact to="/">GREENFIN</NavLink>
             <div className="search-container-2">
               <SearchBar />
             </div>

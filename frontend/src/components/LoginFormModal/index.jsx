@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { Modal } from '../../context/Modal';
 import LoginForm from './LoginForm';
 
-function LoginFormModal() {
+function LoginFormModal({textColor}) {
   const [showModal, setShowModal] = useState(false);
-
+  const style = {
+    color: textColor,
+  }
   return (
     <>
-      <button  id='sign_log'  onClick={() => setShowModal(true)}>Log In</button>
+      <button style = {style} id='sign_log'  onClick={() => setShowModal(true)}>Log In</button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
           <LoginForm />

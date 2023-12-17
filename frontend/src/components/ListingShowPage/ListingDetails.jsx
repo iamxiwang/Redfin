@@ -18,9 +18,9 @@ const ListingDetails = ({listing}) => {
         const sqftValue = new Intl.NumberFormat().format(listing.sqft)
         const estMonthlyPayment = 'Est. '+ '$' + new Intl.NumberFormat().format(listing.estMoPayment) + '/mo'
         return (
-           
+
             <div className="single-listing-container">
-            <div className="subheader"></div>
+
             <div className="img-container">
                 <img id ='single-listing-img' src={listing.photoUrl[0]} alt="" />
                 <div id='img-right'>
@@ -69,9 +69,7 @@ const ListingDetails = ({listing}) => {
                 </div>
                 <Appointment listing={listing}/>
             </div>
-        {/* <button id='trigger'  
-        onClick={() => ( showForm ? setShowForm(false) : setShowForm(true))}>Update Listing</button>
-        <br /> */}
+       
         { showForm &&
         <HouseForm />
         }
