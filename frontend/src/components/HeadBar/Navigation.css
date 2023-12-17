@@ -115,12 +115,10 @@
 .search-container-2 input[type='text'] {
     width: 200px;
     padding: 9px;
-    margin-left: 1px;
+    margin-left: 10px;
     border: 1px solid #ccc;
-    /* border-radius: 4px; */
     box-sizing: border-box;
     margin-top: 8px;
-    /* margin-bottom: 10px; */
     resize: vertical;
 }
 
